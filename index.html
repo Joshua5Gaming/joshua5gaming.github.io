@@ -30,16 +30,6 @@
       transition: background-color 0.3s, color 0.3s;
     }
 
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .profile-img {
-      width: 17%;
-      margin-bottom: 24px;
-    }
-
     a {
       color: var(--link-color);
       text-decoration: none;
@@ -72,6 +62,12 @@
       height: 32px;
       transition: transform 0.3s;
     }
+
+    .email {
+      font-weight: bold;
+      text-decoration: underline;
+      color: var(--text-color);
+    }
   </style>
 </head>
 <body>
@@ -79,9 +75,6 @@
   <button id="theme-toggle" title="Toggle theme">
     <img id="toggle-icon" src="button.png" alt="Toggle Theme">
   </button>
-
-  <!-- Profile Image -->
-  <img src="rb-blck2.png" alt="Joshua's Profile" class="profile-img">
 
   <!-- Content -->
   <h1>Hello, I'm Joshua Edrick Lim</h1>
@@ -95,7 +88,7 @@
     </p>
     <p>
       Contact me at 
-      <a href="mailto:josh@joshuaedrick.my.id" style="text-decoration: underline;">josh@joshuaedrick.my.id</a>
+      <span class="email">josh@joshuaedrick.my.id</span>
     </p>    
   </div>
 
