@@ -4,9 +4,21 @@
   <meta charset="UTF-8">
   <title>Joshua Edrick Lim</title>
   <style>
+    :root {
+      --bg-color: #000;
+      --text-color: #f2f2f2;
+      --link-color: #4ea1ff;
+    }
+
+    .light-mode {
+      --bg-color: #f2f2f2;
+      --text-color: #000;
+      --link-color: #0066cc;
+    }
+
     body {
-      background-color: #000; /* pure black */
-      color: #f2f2f2;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -15,18 +27,24 @@
       height: 100vh;
       margin: 0;
       font-family: sans-serif;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     img {
-      width: 17%;
+      max-width: 100%;
       height: auto;
+    }
+
+    .profile-img {
+      width: 17%;
       margin-bottom: 24px;
     }
 
     a {
-      color: #4ea1ff;
+      color: var(--link-color);
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
     }
 
     a:hover {
@@ -37,10 +55,35 @@
       font-size: 24px;
       margin-top: 16px;
     }
+
+    #theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    #theme-toggle img {
+      width: 32px;
+      height: 32px;
+      transition: transform 0.3s;
+    }
   </style>
 </head>
 <body>
-  <img src="rb-blck2.png" alt="Joshua's Profile">
+  <!-- Toggle Button -->
+  <button id="theme-toggle" title="Toggle theme">
+    <img id="toggle-icon" src="button.png" alt="Toggle Theme">
+  </button>
+
+  <!-- Profile Image -->
+  <img src="rb-blck2.png" alt="Joshua's Profile" class="profile-img">
+
+  <!-- Content -->
   <h1>Hello, I'm Joshua Edrick Lim</h1>
   <div class="info">
     <p>Check out my Instagram: 
@@ -51,8 +94,39 @@
       <a href="server.html">here</a>
     </p>
     <p>
-      Contact me at josh@joshuaedrick.my.id
+      Contact me at 
+      <a href="mailto:josh@joshuaedrick.my.id" style="text-decoration: underline;">josh@joshuaedrick.my.id</a>
     </p>    
   </div>
+
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const toggleIcon = document.getElementById('toggle-icon');
+    const storedTheme = localStorage.getItem('theme');
+
+    function setTheme(mode) {
+      if (mode === 'light') {
+        document.body.classList.add('light-mode');
+        toggleIcon.src = 'button-light.png';
+      } else {
+        document.body.classList.remove('light-mode');
+        toggleIcon.src = 'button.png';
+      }
+    }
+
+    // Initialize theme
+    if (storedTheme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme('dark');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      const isLight = document.body.classList.contains('light-mode');
+      const newTheme = isLight ? 'dark' : 'light';
+      setTheme(newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  </script>
 </body>
 </html>
