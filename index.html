@@ -47,19 +47,16 @@
     }
 
     #theme-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
       background: none;
       border: none;
       padding: 0;
       cursor: pointer;
-      z-index: 999;
+      margin-bottom: 24px;
     }
 
     #theme-toggle img {
-      width: 32px;
-      height: 32px;
+      width: 128px; /* 4x wider */
+      height: auto;
       transition: transform 0.3s;
     }
 
@@ -71,12 +68,12 @@
   </style>
 </head>
 <body>
-  <!-- Toggle Button -->
+  <!-- Centered Toggle Button -->
   <button id="theme-toggle" title="Toggle theme">
     <img id="toggle-icon" src="button.png" alt="Toggle Theme">
   </button>
 
-  <!-- Content -->
+  <!-- Main Content -->
   <h1>Hello, I'm Joshua Edrick Lim</h1>
   <div class="info">
     <p>Check out my Instagram: 
