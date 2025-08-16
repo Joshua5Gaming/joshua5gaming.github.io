@@ -1,0 +1,128 @@
+<html><head><meta charset='UTF-8'><title>2 Tesalonika 3</title></head><body><h1>2 Tesalonika 3</h1><div style="margin: 10px; text-align: center;">
+<select id="bookSelect" onchange="updateChapters()">
+<option value="">-- Pilih Kitab --</option>
+<option value="Matius">Matius</option>
+<option value="Markus">Markus</option>
+<option value="Lukas">Lukas</option>
+<option value="Yohanes">Yohanes</option>
+<option value="Kisah_Para_Rasul">Kisah Para Rasul</option>
+<option value="Roma">Roma</option>
+<option value="1_Korintus">1 Korintus</option>
+<option value="2_Korintus">2 Korintus</option>
+<option value="Galatia">Galatia</option>
+<option value="Efesus">Efesus</option>
+<option value="Filipi">Filipi</option>
+<option value="Kolose">Kolose</option>
+<option value="1_Tesalonika">1 Tesalonika</option>
+<option value="2_Tesalonika">2 Tesalonika</option>
+<option value="1_Timotius">1 Timotius</option>
+<option value="2_Timotius">2 Timotius</option>
+<option value="Titus">Titus</option>
+<option value="Filemon">Filemon</option>
+<option value="Ibrani">Ibrani</option>
+<option value="Yakobus">Yakobus</option>
+<option value="1_Petrus">1 Petrus</option>
+<option value="2_Petrus">2 Petrus</option>
+<option value="1_Yohanes">1 Yohanes</option>
+<option value="2_Yohanes">2 Yohanes</option>
+<option value="3_Yohanes">3 Yohanes</option>
+<option value="Yudas">Yudas</option>
+<option value="Wahyu">Wahyu</option>
+</select>
+
+<div style="margin-top:10px; text-align:center;">
+  <button onclick="prevChapter()">⬅️ Pasal Sebelumnya</button>
+  <button onclick="nextChapter()">Pasal Selanjutnya ➡️</button>
+</div>
+<select id="chapterSelect" disabled onchange="goToChapter()">
+<option value="">-- Pilih Pasal --</option>
+</select>
+<a href="../old/Kejadian_1.html" style="margin-left:10px;">📖 Pindah ke Perjanjian Lama</a>
+</div><p><b>1</b> Selanjutnya, saudara-saudara, berdoalah untuk kami, supaya firman Tuhan beroleh kemajuan dan dimuliakan, sama seperti yang telah terjadi di antara kamu,</p><p><b>2</b> dan supaya kami terlepas dari para pengacau dan orang-orang jahat, sebab bukan semua orang beroleh iman.</p><p><b>3</b> Tetapi Tuhan adalah setia. Ia akan menguatkan hatimu dan memelihara kamu terhadap yang jahat.</p><p><b>4</b> Dan kami percaya dalam Tuhan, bahwa apa yang kami pesankan kepadamu, kamu lakukan dan akan kamu lakukan.</p><p><b>5</b> Kiranya Tuhan tetap menujukan hatimu kepada kasih Allah dan kepada ketabahan Kristus.</p><p><b>6</b> Tetapi kami berpesan kepadamu, saudara-saudara, dalam nama Tuhan Yesus Kristus, supaya kamu menjauhkan diri dari setiap saudara yang tidak melakukan pekerjaannya dan yang tidak menurut ajaran yang telah kamu terima dari kami.</p><p><b>7</b> Sebab kamu sendiri tahu, bagaimana kamu harus mengikuti teladan kami, karena kami tidak lalai bekerja di antara kamu,</p><p><b>8</b> dan tidak makan roti orang dengan percuma, tetapi kami berusaha dan berjerih payah siang malam, supaya jangan menjadi beban bagi siapapun di antara kamu.</p><p><b>9</b> Bukan karena kami tidak berhak untuk itu, melainkan karena kami mau menjadikan diri kami teladan bagi kamu, supaya kamu ikuti.</p><p><b>10</b> Sebab, juga waktu kami berada di antara kamu, kami memberi peringatan ini kepada kamu: jika seorang tidak mau bekerja, janganlah ia makan.</p><p><b>11</b> Kami katakan ini karena kami dengar, bahwa ada orang yang tidak tertib hidupnya dan tidak bekerja, melainkan sibuk dengan hal-hal yang tidak berguna.</p><p><b>12</b> Orang-orang yang demikian kami peringati dan nasihati dalam Tuhan Yesus Kristus, supaya mereka tetap tenang melakukan pekerjaannya dan dengan demikian makan makanannya sendiri.</p><p><b>13</b> Dan kamu, saudara-saudara, janganlah jemu-jemu berbuat apa yang baik.</p><p><b>14</b> Jika ada orang yang tidak mau mendengarkan apa yang kami katakan dalam surat ini, tandailah dia dan jangan bergaul dengan dia, supaya ia menjadi malu,</p><p><b>15</b> tetapi janganlah anggap dia sebagai musuh, tetapi tegorlah dia sebagai seorang saudara.</p><p><b>16</b> Dan Ia, Tuhan damai sejahtera, kiranya mengaruniakan damai sejahtera-Nya terus-menerus, dalam segala hal, kepada kamu. Tuhan menyertai kamu sekalian.</p><p><b>17</b> Salam dari padaku, Paulus. Salam ini kutulis dengan tanganku sendiri. Inilah tanda dalam setiap surat: beginilah tulisanku.</p><p><b>18</b> Kasih karunia Yesus Kristus, Tuhan kita, menyertai kamu sekalian!</p>
+<script>
+  const chapterCounts = {
+    "Kejadian": 50, "Keluaran": 40, "Imamat": 27, "Bilangan": 36, "Ulangan": 34,
+    "Yosua": 24, "Hakim-Hakim": 21, "Rut": 4,
+    "1_Samuel": 31, "2_Samuel": 24,
+    "1_Raja-Raja": 22, "2_Raja-Raja": 25,
+    "1_Tawarikh": 29, "2_Tawarikh": 36,
+    "Ezra": 10, "Nehemia": 13, "Ester": 10,
+    "Ayub": 42, "Mazmur": 150, "Amsal": 31, "Pengkhotbah": 12, "Kidung_Agung": 8,
+    "Yesaya": 66, "Yeremia": 52, "Ratapan": 5,
+    "Yehezkiel": 48, "Daniel": 12,
+    "Hosea": 14, "Yoel": 3, "Amos": 9, "Obaja": 1, "Yunus": 4,
+    "Mikha": 7, "Nahum": 3, "Habakuk": 3, "Zefanya": 3, "Hagai": 2,
+    "Zakharia": 14, "Maleakhi": 4,
+
+    "Matius": 28, "Markus": 16, "Lukas": 24, "Yohanes": 21,
+    "Kisah_Para_Rasul": 28,
+    "Roma": 16, "1_Korintus": 16, "2_Korintus": 13,
+    "Galatia": 6, "Efesus": 6, "Filipi": 4, "Kolose": 4,
+    "1_Tesalonika": 5, "2_Tesalonika": 3,
+    "1_Timotius": 6, "2_Timotius": 4,
+    "Titus": 3, "Filemon": 1,
+    "Ibrani": 13, "Yakobus": 5,
+    "1_Petrus": 5, "2_Petrus": 3,
+    "1_Yohanes": 5, "2_Yohanes": 1, "3_Yohanes": 1,
+    "Yudas": 1, "Wahyu": 22
+  };
+
+  function updateChapters() {
+    const book = document.getElementById("bookSelect").value;
+    const chapterSelect = document.getElementById("chapterSelect");
+    chapterSelect.innerHTML = '<option value="">-- Pilih Pasal --</option>';
+
+    if (book && chapterCounts[book]) {
+      for (let i = 1; i <= chapterCounts[book]; i++) {
+        const opt = document.createElement("option");
+        opt.value = i;
+        opt.textContent = i;
+        chapterSelect.appendChild(opt);
+      }
+      chapterSelect.disabled = false;
+    } else {
+      chapterSelect.disabled = true;
+    }
+  }
+
+  function goToChapter() {
+    const book = document.getElementById("bookSelect").value;
+    const chapter = document.getElementById("chapterSelect").value;
+    if (book && chapter) {
+      window.location.href = `${book}_${chapter}.html`;
+    }
+  }
+</script>
+
+
+<!-- PREV/NEXT SCRIPT START -->
+<script>
+  function getCurrentBookAndChapter() {
+    const file = (window.location.pathname.split("/").pop() || "").replace(".html","");
+    const parts = file.split("_");
+    const chapter = parseInt(parts.pop(), 10);
+    const book = parts.join("_");
+    return { book, chapter };
+  }
+
+  function prevChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    if (chapter > 1) {
+      window.location.href = `${book}_${chapter - 1}.html`;
+    }
+  }
+
+  function nextChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    // assume chapterCounts already exists from your dropdown script
+    const max = chapterCounts[book];
+    if (chapter < max) {
+      window.location.href = `${book}_${chapter + 1}.html`;
+    }
+  }
+</script>
+<!-- PREV/NEXT SCRIPT END -->
+
+</body></html>

@@ -1,0 +1,140 @@
+<html><head><meta charset='UTF-8'><title>Mazmur 45</title></head><body><h1>Mazmur 45</h1><div style="margin: 10px; text-align: center;">
+<select id="bookSelect" onchange="updateChapters()">
+<option value="">-- Pilih Kitab --</option>
+<option value="Kejadian">Kejadian</option>
+<option value="Keluaran">Keluaran</option>
+<option value="Imamat">Imamat</option>
+<option value="Bilangan">Bilangan</option>
+<option value="Ulangan">Ulangan</option>
+<option value="Yosua">Yosua</option>
+<option value="Hakim-Hakim">Hakim-Hakim</option>
+<option value="Rut">Rut</option>
+<option value="1_Samuel">1 Samuel</option>
+<option value="2_Samuel">2 Samuel</option>
+<option value="1_Raja-Raja">1 Raja-Raja</option>
+<option value="2_Raja-Raja">2 Raja-Raja</option>
+<option value="1_Tawarikh">1 Tawarikh</option>
+<option value="2_Tawarikh">2 Tawarikh</option>
+<option value="Ezra">Ezra</option>
+<option value="Nehemia">Nehemia</option>
+<option value="Ester">Ester</option>
+<option value="Ayub">Ayub</option>
+<option value="Mazmur">Mazmur</option>
+<option value="Amsal">Amsal</option>
+<option value="Pengkhotbah">Pengkhotbah</option>
+<option value="Kidung_Agung">Kidung Agung</option>
+<option value="Yesaya">Yesaya</option>
+<option value="Yeremia">Yeremia</option>
+<option value="Ratapan">Ratapan</option>
+<option value="Yehezkiel">Yehezkiel</option>
+<option value="Daniel">Daniel</option>
+<option value="Hosea">Hosea</option>
+<option value="Yoel">Yoel</option>
+<option value="Amos">Amos</option>
+<option value="Obaja">Obaja</option>
+<option value="Yunus">Yunus</option>
+<option value="Mikha">Mikha</option>
+<option value="Nahum">Nahum</option>
+<option value="Habakuk">Habakuk</option>
+<option value="Zefanya">Zefanya</option>
+<option value="Hagai">Hagai</option>
+<option value="Zakharia">Zakharia</option>
+<option value="Maleakhi">Maleakhi</option>
+</select>
+
+<div style="margin-top:10px; text-align:center;">
+  <button onclick="prevChapter()">⬅️ Pasal Sebelumnya</button>
+  <button onclick="nextChapter()">Pasal Selanjutnya ➡️</button>
+</div>
+<select id="chapterSelect" disabled onchange="goToChapter()">
+<option value="">-- Pilih Pasal --</option>
+</select>
+<a href="../new/Matius_1.html" style="margin-left:10px;">📖 Pindah ke Perjanjian Baru</a>
+</div><p><b>1</b> Untuk pemimpin biduan. Menurut lagu: Bunga bakung. Dari bani Korah. Nyanyian pengajaran; nyanyian kasih. (45-2) Hatiku meluap dengan kata-kata indah, aku hendak menyampaikan sajakku kepada raja; lidahku ialah pena seorang jurutulis yang mahir.</p><p><b>2</b> (45-3) Engkau yang terelok di antara anak-anak manusia, kemurahan tercurah pada bibirmu, sebab itu Allah telah memberkati engkau untuk selama-lamanya.</p><p><b>3</b> (45-4) Ikatlah pedangmu pada pinggang, hai pahlawan, dalam keagunganmu dan semarakmu!</p><p><b>4</b> (45-5) Dalam semarakmu itu majulah demi kebenaran, perikemanusiaan dan keadilan! Biarlah tangan kananmu mengajarkan engkau perbuatan-perbuatan yang dahsyat!</p><p><b>5</b> (45-6) Anak-anak panahmu tajam, menembus jantung musuh raja; bangsa-bangsa jatuh di bawah kakimu.</p><p><b>6</b> (45-7) Takhtamu kepunyaan Allah, tetap untuk seterusnya dan selamanya, dan tongkat kerajaanmu adalah tongkat kebenaran.</p><p><b>7</b> (45-8) Engkau mencintai keadilan dan membenci kefasikan; sebab itu Allah, Allahmu, telah mengurapi engkau dengan minyak sebagai tanda kesukaan, melebihi teman-teman sekutumu.</p><p><b>8</b> (45-9) Segala pakaianmu berbau mur, gaharu dan cendana; dari istana gading permainan kecapi menyukakan engkau;</p><p><b>9</b> (45-10) di antara mereka yang disayangi terdapat puteri-puteri raja, di sebelah kananmu berdiri permaisuri berpakaian emas dari Ofir.</p><p><b>10</b> (45-11) Dengarlah, hai puteri, lihatlah, dan sendengkanlah telingamu, lupakanlah bangsamu dan seisi rumah ayahmu!</p><p><b>11</b> (45-12) Biarlah raja menjadi gairah karena keelokanmu, sebab dialah tuanmu! Sujudlah kepadanya!</p><p><b>12</b> (45-13) Puteri Tirus datang dengan pemberian-pemberian; orang-orang kaya di antara rakyat akan mengambil muka kepadamu.</p><p><b>13</b> (45-14) Keindahan belaka puteri raja itu di dalam, pakaiannya berpakankan emas.</p><p><b>14</b> (45-15) Dengan pakaian bersulam berwarna-warna ia dibawa kepada raja; anak-anak dara mengikutinya, yakni teman-temannya, yang didatangkan untuk dia.</p><p><b>15</b> (45-16) Dengan sukacita dan sorak-sorai mereka dibawa, mereka masuk ke dalam istana raja.</p><p><b>16</b> (45-17) Para bapa leluhurmu hendaknya diganti oleh anak-anakmu nanti; engkau akan mengangkat mereka menjadi pembesar di seluruh bumi.</p><p><b>17</b> (45-18) Aku mau memasyhurkan namamu turun-temurun; sebab itu bangsa-bangsa akan bersyukur kepadamu untuk seterusnya dan selamanya.</p>
+<script>
+  const chapterCounts = {
+    "Kejadian": 50, "Keluaran": 40, "Imamat": 27, "Bilangan": 36, "Ulangan": 34,
+    "Yosua": 24, "Hakim-Hakim": 21, "Rut": 4,
+    "1_Samuel": 31, "2_Samuel": 24,
+    "1_Raja-Raja": 22, "2_Raja-Raja": 25,
+    "1_Tawarikh": 29, "2_Tawarikh": 36,
+    "Ezra": 10, "Nehemia": 13, "Ester": 10,
+    "Ayub": 42, "Mazmur": 150, "Amsal": 31, "Pengkhotbah": 12, "Kidung_Agung": 8,
+    "Yesaya": 66, "Yeremia": 52, "Ratapan": 5,
+    "Yehezkiel": 48, "Daniel": 12,
+    "Hosea": 14, "Yoel": 3, "Amos": 9, "Obaja": 1, "Yunus": 4,
+    "Mikha": 7, "Nahum": 3, "Habakuk": 3, "Zefanya": 3, "Hagai": 2,
+    "Zakharia": 14, "Maleakhi": 4,
+
+    "Matius": 28, "Markus": 16, "Lukas": 24, "Yohanes": 21,
+    "Kisah_Para_Rasul": 28,
+    "Roma": 16, "1_Korintus": 16, "2_Korintus": 13,
+    "Galatia": 6, "Efesus": 6, "Filipi": 4, "Kolose": 4,
+    "1_Tesalonika": 5, "2_Tesalonika": 3,
+    "1_Timotius": 6, "2_Timotius": 4,
+    "Titus": 3, "Filemon": 1,
+    "Ibrani": 13, "Yakobus": 5,
+    "1_Petrus": 5, "2_Petrus": 3,
+    "1_Yohanes": 5, "2_Yohanes": 1, "3_Yohanes": 1,
+    "Yudas": 1, "Wahyu": 22
+  };
+
+  function updateChapters() {
+    const book = document.getElementById("bookSelect").value;
+    const chapterSelect = document.getElementById("chapterSelect");
+    chapterSelect.innerHTML = '<option value="">-- Pilih Pasal --</option>';
+
+    if (book && chapterCounts[book]) {
+      for (let i = 1; i <= chapterCounts[book]; i++) {
+        const opt = document.createElement("option");
+        opt.value = i;
+        opt.textContent = i;
+        chapterSelect.appendChild(opt);
+      }
+      chapterSelect.disabled = false;
+    } else {
+      chapterSelect.disabled = true;
+    }
+  }
+
+  function goToChapter() {
+    const book = document.getElementById("bookSelect").value;
+    const chapter = document.getElementById("chapterSelect").value;
+    if (book && chapter) {
+      window.location.href = `${book}_${chapter}.html`;
+    }
+  }
+</script>
+
+
+<!-- PREV/NEXT SCRIPT START -->
+<script>
+  function getCurrentBookAndChapter() {
+    const file = (window.location.pathname.split("/").pop() || "").replace(".html","");
+    const parts = file.split("_");
+    const chapter = parseInt(parts.pop(), 10);
+    const book = parts.join("_");
+    return { book, chapter };
+  }
+
+  function prevChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    if (chapter > 1) {
+      window.location.href = `${book}_${chapter - 1}.html`;
+    }
+  }
+
+  function nextChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    // assume chapterCounts already exists from your dropdown script
+    const max = chapterCounts[book];
+    if (chapter < max) {
+      window.location.href = `${book}_${chapter + 1}.html`;
+    }
+  }
+</script>
+<!-- PREV/NEXT SCRIPT END -->
+
+</body></html>

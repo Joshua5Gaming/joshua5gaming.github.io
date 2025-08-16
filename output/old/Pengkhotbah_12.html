@@ -1,0 +1,140 @@
+<html><head><meta charset='UTF-8'><title>Pengkhotbah 12</title></head><body><h1>Pengkhotbah 12</h1><div style="margin: 10px; text-align: center;">
+<select id="bookSelect" onchange="updateChapters()">
+<option value="">-- Pilih Kitab --</option>
+<option value="Kejadian">Kejadian</option>
+<option value="Keluaran">Keluaran</option>
+<option value="Imamat">Imamat</option>
+<option value="Bilangan">Bilangan</option>
+<option value="Ulangan">Ulangan</option>
+<option value="Yosua">Yosua</option>
+<option value="Hakim-Hakim">Hakim-Hakim</option>
+<option value="Rut">Rut</option>
+<option value="1_Samuel">1 Samuel</option>
+<option value="2_Samuel">2 Samuel</option>
+<option value="1_Raja-Raja">1 Raja-Raja</option>
+<option value="2_Raja-Raja">2 Raja-Raja</option>
+<option value="1_Tawarikh">1 Tawarikh</option>
+<option value="2_Tawarikh">2 Tawarikh</option>
+<option value="Ezra">Ezra</option>
+<option value="Nehemia">Nehemia</option>
+<option value="Ester">Ester</option>
+<option value="Ayub">Ayub</option>
+<option value="Mazmur">Mazmur</option>
+<option value="Amsal">Amsal</option>
+<option value="Pengkhotbah">Pengkhotbah</option>
+<option value="Kidung_Agung">Kidung Agung</option>
+<option value="Yesaya">Yesaya</option>
+<option value="Yeremia">Yeremia</option>
+<option value="Ratapan">Ratapan</option>
+<option value="Yehezkiel">Yehezkiel</option>
+<option value="Daniel">Daniel</option>
+<option value="Hosea">Hosea</option>
+<option value="Yoel">Yoel</option>
+<option value="Amos">Amos</option>
+<option value="Obaja">Obaja</option>
+<option value="Yunus">Yunus</option>
+<option value="Mikha">Mikha</option>
+<option value="Nahum">Nahum</option>
+<option value="Habakuk">Habakuk</option>
+<option value="Zefanya">Zefanya</option>
+<option value="Hagai">Hagai</option>
+<option value="Zakharia">Zakharia</option>
+<option value="Maleakhi">Maleakhi</option>
+</select>
+
+<div style="margin-top:10px; text-align:center;">
+  <button onclick="prevChapter()">⬅️ Pasal Sebelumnya</button>
+  <button onclick="nextChapter()">Pasal Selanjutnya ➡️</button>
+</div>
+<select id="chapterSelect" disabled onchange="goToChapter()">
+<option value="">-- Pilih Pasal --</option>
+</select>
+<a href="../new/Matius_1.html" style="margin-left:10px;">📖 Pindah ke Perjanjian Baru</a>
+</div><p><b>1</b> Ingatlah akan Penciptamu pada masa mudamu, sebelum tiba hari-hari yang malang dan mendekat tahun-tahun yang kaukatakan: "Tak ada kesenangan bagiku di dalamnya!",</p><p><b>2</b> sebelum matahari dan terang, bulan dan bintang-bintang menjadi gelap, dan awan-awan datang kembali sesudah hujan,</p><p><b>3</b> pada waktu penjaga-penjaga rumah gemetar, dan orang-orang kuat membungkuk, dan perempuan-perempuan penggiling berhenti karena berkurang jumlahnya, dan yang melihat dari jendela semuanya menjadi kabur,</p><p><b>4</b> dan pintu-pintu di tepi jalan tertutup, dan bunyi penggilingan menjadi lemah, dan suara menjadi seperti kicauan burung, dan semua penyanyi perempuan tunduk,</p><p><b>5</b> juga orang menjadi takut tinggi, dan ketakutan ada di jalan, pohon badam berbunga, belalang menyeret dirinya dengan susah payah dan nafsu makan tak dapat dibangkitkan lagi--karena manusia pergi ke rumahnya yang kekal dan peratap-peratap berkeliaran di jalan,</p><p><b>6</b> sebelum rantai perak diputuskan dan pelita emas dipecahkan, sebelum tempayan dihancurkan dekat mata air dan roda timba dirusakkan di atas sumur,</p><p><b>7</b> dan debu kembali menjadi tanah seperti semula dan roh kembali kepada Allah yang mengaruniakannya.</p><p><b>8</b> Kesia-siaan atas kesia-siaan, kata Pengkhotbah, segala sesuatu adalah sia-sia.</p><p><b>9</b> Selain Pengkhotbah berhikmat, ia mengajarkan juga kepada umat itu pengetahuan. Ia menimbang, menguji dan menyusun banyak amsal.</p><p><b>10</b> Pengkhotbah berusaha mendapat kata-kata yang menyenangkan dan menulis kata-kata kebenaran secara jujur.</p><p><b>11</b> Kata-kata orang berhikmat seperti kusa dan kumpulan-kumpulannya seperti paku-paku yang tertancap, diberikan oleh satu gembala.</p><p><b>12</b> Lagipula, anakku, waspadalah! Membuat banyak buku tak akan ada akhirnya, dan banyak belajar melelahkan badan.</p><p><b>13</b> Akhir kata dari segala yang didengar ialah: takutlah akan Allah dan berpeganglah pada perintah-perintah-Nya, karena ini adalah kewajiban setiap orang.</p><p><b>14</b> Karena Allah akan membawa setiap perbuatan ke pengadilan yang berlaku atas segala sesuatu yang tersembunyi, entah itu baik, entah itu jahat.</p>
+<script>
+  const chapterCounts = {
+    "Kejadian": 50, "Keluaran": 40, "Imamat": 27, "Bilangan": 36, "Ulangan": 34,
+    "Yosua": 24, "Hakim-Hakim": 21, "Rut": 4,
+    "1_Samuel": 31, "2_Samuel": 24,
+    "1_Raja-Raja": 22, "2_Raja-Raja": 25,
+    "1_Tawarikh": 29, "2_Tawarikh": 36,
+    "Ezra": 10, "Nehemia": 13, "Ester": 10,
+    "Ayub": 42, "Mazmur": 150, "Amsal": 31, "Pengkhotbah": 12, "Kidung_Agung": 8,
+    "Yesaya": 66, "Yeremia": 52, "Ratapan": 5,
+    "Yehezkiel": 48, "Daniel": 12,
+    "Hosea": 14, "Yoel": 3, "Amos": 9, "Obaja": 1, "Yunus": 4,
+    "Mikha": 7, "Nahum": 3, "Habakuk": 3, "Zefanya": 3, "Hagai": 2,
+    "Zakharia": 14, "Maleakhi": 4,
+
+    "Matius": 28, "Markus": 16, "Lukas": 24, "Yohanes": 21,
+    "Kisah_Para_Rasul": 28,
+    "Roma": 16, "1_Korintus": 16, "2_Korintus": 13,
+    "Galatia": 6, "Efesus": 6, "Filipi": 4, "Kolose": 4,
+    "1_Tesalonika": 5, "2_Tesalonika": 3,
+    "1_Timotius": 6, "2_Timotius": 4,
+    "Titus": 3, "Filemon": 1,
+    "Ibrani": 13, "Yakobus": 5,
+    "1_Petrus": 5, "2_Petrus": 3,
+    "1_Yohanes": 5, "2_Yohanes": 1, "3_Yohanes": 1,
+    "Yudas": 1, "Wahyu": 22
+  };
+
+  function updateChapters() {
+    const book = document.getElementById("bookSelect").value;
+    const chapterSelect = document.getElementById("chapterSelect");
+    chapterSelect.innerHTML = '<option value="">-- Pilih Pasal --</option>';
+
+    if (book && chapterCounts[book]) {
+      for (let i = 1; i <= chapterCounts[book]; i++) {
+        const opt = document.createElement("option");
+        opt.value = i;
+        opt.textContent = i;
+        chapterSelect.appendChild(opt);
+      }
+      chapterSelect.disabled = false;
+    } else {
+      chapterSelect.disabled = true;
+    }
+  }
+
+  function goToChapter() {
+    const book = document.getElementById("bookSelect").value;
+    const chapter = document.getElementById("chapterSelect").value;
+    if (book && chapter) {
+      window.location.href = `${book}_${chapter}.html`;
+    }
+  }
+</script>
+
+
+<!-- PREV/NEXT SCRIPT START -->
+<script>
+  function getCurrentBookAndChapter() {
+    const file = (window.location.pathname.split("/").pop() || "").replace(".html","");
+    const parts = file.split("_");
+    const chapter = parseInt(parts.pop(), 10);
+    const book = parts.join("_");
+    return { book, chapter };
+  }
+
+  function prevChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    if (chapter > 1) {
+      window.location.href = `${book}_${chapter - 1}.html`;
+    }
+  }
+
+  function nextChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    // assume chapterCounts already exists from your dropdown script
+    const max = chapterCounts[book];
+    if (chapter < max) {
+      window.location.href = `${book}_${chapter + 1}.html`;
+    }
+  }
+</script>
+<!-- PREV/NEXT SCRIPT END -->
+
+</body></html>

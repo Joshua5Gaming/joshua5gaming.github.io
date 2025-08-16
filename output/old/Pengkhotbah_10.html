@@ -1,0 +1,140 @@
+<html><head><meta charset='UTF-8'><title>Pengkhotbah 10</title></head><body><h1>Pengkhotbah 10</h1><div style="margin: 10px; text-align: center;">
+<select id="bookSelect" onchange="updateChapters()">
+<option value="">-- Pilih Kitab --</option>
+<option value="Kejadian">Kejadian</option>
+<option value="Keluaran">Keluaran</option>
+<option value="Imamat">Imamat</option>
+<option value="Bilangan">Bilangan</option>
+<option value="Ulangan">Ulangan</option>
+<option value="Yosua">Yosua</option>
+<option value="Hakim-Hakim">Hakim-Hakim</option>
+<option value="Rut">Rut</option>
+<option value="1_Samuel">1 Samuel</option>
+<option value="2_Samuel">2 Samuel</option>
+<option value="1_Raja-Raja">1 Raja-Raja</option>
+<option value="2_Raja-Raja">2 Raja-Raja</option>
+<option value="1_Tawarikh">1 Tawarikh</option>
+<option value="2_Tawarikh">2 Tawarikh</option>
+<option value="Ezra">Ezra</option>
+<option value="Nehemia">Nehemia</option>
+<option value="Ester">Ester</option>
+<option value="Ayub">Ayub</option>
+<option value="Mazmur">Mazmur</option>
+<option value="Amsal">Amsal</option>
+<option value="Pengkhotbah">Pengkhotbah</option>
+<option value="Kidung_Agung">Kidung Agung</option>
+<option value="Yesaya">Yesaya</option>
+<option value="Yeremia">Yeremia</option>
+<option value="Ratapan">Ratapan</option>
+<option value="Yehezkiel">Yehezkiel</option>
+<option value="Daniel">Daniel</option>
+<option value="Hosea">Hosea</option>
+<option value="Yoel">Yoel</option>
+<option value="Amos">Amos</option>
+<option value="Obaja">Obaja</option>
+<option value="Yunus">Yunus</option>
+<option value="Mikha">Mikha</option>
+<option value="Nahum">Nahum</option>
+<option value="Habakuk">Habakuk</option>
+<option value="Zefanya">Zefanya</option>
+<option value="Hagai">Hagai</option>
+<option value="Zakharia">Zakharia</option>
+<option value="Maleakhi">Maleakhi</option>
+</select>
+
+<div style="margin-top:10px; text-align:center;">
+  <button onclick="prevChapter()">⬅️ Pasal Sebelumnya</button>
+  <button onclick="nextChapter()">Pasal Selanjutnya ➡️</button>
+</div>
+<select id="chapterSelect" disabled onchange="goToChapter()">
+<option value="">-- Pilih Pasal --</option>
+</select>
+<a href="../new/Matius_1.html" style="margin-left:10px;">📖 Pindah ke Perjanjian Baru</a>
+</div><p><b>1</b> Lalat yang mati menyebabkan urapan dari pembuat urapan berbau busuk; demikian juga sedikit kebodohan lebih berpengaruh dari pada hikmat dan kehormatan.</p><p><b>2</b> Hati orang berhikmat menuju ke kanan, tetapi hati orang bodoh ke kiri.</p><p><b>3</b> Juga kalau ia berjalan di lorong orang bodoh itu tumpul pikirannya, dan ia berkata kepada setiap orang: "Orang itu bodoh!"</p><p><b>4</b> Jika amarah penguasa menimpa engkau, janganlah meninggalkan tempatmu, karena kesabaran mencegah kesalahan-kesalahan besar.</p><p><b>5</b> Ada suatu kejahatan yang kulihat di bawah matahari sebagai kekhilafan yang berasal dari seorang penguasa:</p><p><b>6</b> pada banyak tempat yang tinggi, didudukkan orang bodoh, sedangkan tempat yang rendah diduduki orang kaya.</p><p><b>7</b> Aku melihat budak-budak menunggang kuda dan pembesar-pembesar berjalan kaki seperti budak-budak.</p><p><b>8</b> Barangsiapa menggali lobang akan jatuh ke dalamnya, dan barangsiapa mendobrak tembok akan dipagut ular.</p><p><b>9</b> Barangsiapa memecahkan batu akan dilukainya; barangsiapa membelah kayu akan dibahayakannya.</p><p><b>10</b> Jika besi menjadi tumpul dan tidak diasah, maka orang harus memperbesar tenaga, tetapi yang terpenting untuk berhasil adalah hikmat.</p><p><b>11</b> Jika ular memagut sebelum mantera diucapkan, maka tukang mantera tidak akan berhasil.</p><p><b>12</b> Perkataan mulut orang berhikmat menarik, tetapi bibir orang bodoh menelan orang itu sendiri.</p><p><b>13</b> Awal perkataan yang keluar dari mulutnya adalah kebodohan, dan akhir bicaranya adalah kebebalan yang mencelakakan.</p><p><b>14</b> Orang yang bodoh banyak bicaranya, meskipun orang tidak tahu apa yang akan terjadi, dan siapakah yang akan mengatakan kepadanya apa yang akan terjadi sesudah dia?</p><p><b>15</b> Jerih payah orang bodoh melelahkan orang itu sendiri, karena ia tidak mengetahui jalan ke kota.</p><p><b>16</b> Wahai engkau tanah, kalau rajamu seorang kanak-kanak, dan pemimpin-pemimpinmu pagi-pagi sudah makan!</p><p><b>17</b> Berbahagialah engkau tanah, kalau rajamu seorang yang berasal dari kaum pemuka, dan pemimpin-pemimpinmu makan pada waktunya dalam keperkasaan dan bukan dalam kemabukan!</p><p><b>18</b> Oleh karena kemalasan runtuhlah atap, dan oleh karena kelambanan tangan bocorlah rumah.</p><p><b>19</b> Untuk tertawa orang menghidangkan makanan; anggur meriangkan hidup dan uang memungkinkan semuanya itu.</p><p><b>20</b> Dalam pikiranpun janganlah engkau mengutuki raja, dan dalam kamar tidur janganlah engkau mengutuki orang kaya, karena burung di udara mungkin akan menyampaikan ucapanmu, dan segala yang bersayap dapat menyampaikan apa yang kauucapkan.</p>
+<script>
+  const chapterCounts = {
+    "Kejadian": 50, "Keluaran": 40, "Imamat": 27, "Bilangan": 36, "Ulangan": 34,
+    "Yosua": 24, "Hakim-Hakim": 21, "Rut": 4,
+    "1_Samuel": 31, "2_Samuel": 24,
+    "1_Raja-Raja": 22, "2_Raja-Raja": 25,
+    "1_Tawarikh": 29, "2_Tawarikh": 36,
+    "Ezra": 10, "Nehemia": 13, "Ester": 10,
+    "Ayub": 42, "Mazmur": 150, "Amsal": 31, "Pengkhotbah": 12, "Kidung_Agung": 8,
+    "Yesaya": 66, "Yeremia": 52, "Ratapan": 5,
+    "Yehezkiel": 48, "Daniel": 12,
+    "Hosea": 14, "Yoel": 3, "Amos": 9, "Obaja": 1, "Yunus": 4,
+    "Mikha": 7, "Nahum": 3, "Habakuk": 3, "Zefanya": 3, "Hagai": 2,
+    "Zakharia": 14, "Maleakhi": 4,
+
+    "Matius": 28, "Markus": 16, "Lukas": 24, "Yohanes": 21,
+    "Kisah_Para_Rasul": 28,
+    "Roma": 16, "1_Korintus": 16, "2_Korintus": 13,
+    "Galatia": 6, "Efesus": 6, "Filipi": 4, "Kolose": 4,
+    "1_Tesalonika": 5, "2_Tesalonika": 3,
+    "1_Timotius": 6, "2_Timotius": 4,
+    "Titus": 3, "Filemon": 1,
+    "Ibrani": 13, "Yakobus": 5,
+    "1_Petrus": 5, "2_Petrus": 3,
+    "1_Yohanes": 5, "2_Yohanes": 1, "3_Yohanes": 1,
+    "Yudas": 1, "Wahyu": 22
+  };
+
+  function updateChapters() {
+    const book = document.getElementById("bookSelect").value;
+    const chapterSelect = document.getElementById("chapterSelect");
+    chapterSelect.innerHTML = '<option value="">-- Pilih Pasal --</option>';
+
+    if (book && chapterCounts[book]) {
+      for (let i = 1; i <= chapterCounts[book]; i++) {
+        const opt = document.createElement("option");
+        opt.value = i;
+        opt.textContent = i;
+        chapterSelect.appendChild(opt);
+      }
+      chapterSelect.disabled = false;
+    } else {
+      chapterSelect.disabled = true;
+    }
+  }
+
+  function goToChapter() {
+    const book = document.getElementById("bookSelect").value;
+    const chapter = document.getElementById("chapterSelect").value;
+    if (book && chapter) {
+      window.location.href = `${book}_${chapter}.html`;
+    }
+  }
+</script>
+
+
+<!-- PREV/NEXT SCRIPT START -->
+<script>
+  function getCurrentBookAndChapter() {
+    const file = (window.location.pathname.split("/").pop() || "").replace(".html","");
+    const parts = file.split("_");
+    const chapter = parseInt(parts.pop(), 10);
+    const book = parts.join("_");
+    return { book, chapter };
+  }
+
+  function prevChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    if (chapter > 1) {
+      window.location.href = `${book}_${chapter - 1}.html`;
+    }
+  }
+
+  function nextChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    // assume chapterCounts already exists from your dropdown script
+    const max = chapterCounts[book];
+    if (chapter < max) {
+      window.location.href = `${book}_${chapter + 1}.html`;
+    }
+  }
+</script>
+<!-- PREV/NEXT SCRIPT END -->
+
+</body></html>

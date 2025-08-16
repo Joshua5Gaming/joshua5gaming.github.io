@@ -1,0 +1,140 @@
+<html><head><meta charset='UTF-8'><title>Mazmur 145</title></head><body><h1>Mazmur 145</h1><div style="margin: 10px; text-align: center;">
+<select id="bookSelect" onchange="updateChapters()">
+<option value="">-- Pilih Kitab --</option>
+<option value="Kejadian">Kejadian</option>
+<option value="Keluaran">Keluaran</option>
+<option value="Imamat">Imamat</option>
+<option value="Bilangan">Bilangan</option>
+<option value="Ulangan">Ulangan</option>
+<option value="Yosua">Yosua</option>
+<option value="Hakim-Hakim">Hakim-Hakim</option>
+<option value="Rut">Rut</option>
+<option value="1_Samuel">1 Samuel</option>
+<option value="2_Samuel">2 Samuel</option>
+<option value="1_Raja-Raja">1 Raja-Raja</option>
+<option value="2_Raja-Raja">2 Raja-Raja</option>
+<option value="1_Tawarikh">1 Tawarikh</option>
+<option value="2_Tawarikh">2 Tawarikh</option>
+<option value="Ezra">Ezra</option>
+<option value="Nehemia">Nehemia</option>
+<option value="Ester">Ester</option>
+<option value="Ayub">Ayub</option>
+<option value="Mazmur">Mazmur</option>
+<option value="Amsal">Amsal</option>
+<option value="Pengkhotbah">Pengkhotbah</option>
+<option value="Kidung_Agung">Kidung Agung</option>
+<option value="Yesaya">Yesaya</option>
+<option value="Yeremia">Yeremia</option>
+<option value="Ratapan">Ratapan</option>
+<option value="Yehezkiel">Yehezkiel</option>
+<option value="Daniel">Daniel</option>
+<option value="Hosea">Hosea</option>
+<option value="Yoel">Yoel</option>
+<option value="Amos">Amos</option>
+<option value="Obaja">Obaja</option>
+<option value="Yunus">Yunus</option>
+<option value="Mikha">Mikha</option>
+<option value="Nahum">Nahum</option>
+<option value="Habakuk">Habakuk</option>
+<option value="Zefanya">Zefanya</option>
+<option value="Hagai">Hagai</option>
+<option value="Zakharia">Zakharia</option>
+<option value="Maleakhi">Maleakhi</option>
+</select>
+
+<div style="margin-top:10px; text-align:center;">
+  <button onclick="prevChapter()">⬅️ Pasal Sebelumnya</button>
+  <button onclick="nextChapter()">Pasal Selanjutnya ➡️</button>
+</div>
+<select id="chapterSelect" disabled onchange="goToChapter()">
+<option value="">-- Pilih Pasal --</option>
+</select>
+<a href="../new/Matius_1.html" style="margin-left:10px;">📖 Pindah ke Perjanjian Baru</a>
+</div><p><b>1</b> Puji-pujian dari Daud. Aku hendak mengagungkan Engkau, ya Allahku, ya Raja, dan aku hendak memuji nama-Mu untuk seterusnya dan selamanya.</p><p><b>2</b> Setiap hari aku hendak memuji Engkau, dan hendak memuliakan nama-Mu untuk seterusnya dan selamanya.</p><p><b>3</b> Besarlah TUHAN dan sangat terpuji, dan kebesaran-Nya tidak terduga.</p><p><b>4</b> Angkatan demi angkatan akan memegahkan pekerjaan-pekerjaan-Mu dan akan memberitakan keperkasaan-Mu.</p><p><b>5</b> Semarak kemuliaan-Mu yang agung dan perbuatan-perbuatan-Mu yang ajaib akan kunyanyikan.</p><p><b>6</b> Kekuatan perbuatan-perbuatan-Mu yang dahsyat akan diumumkan mereka, dan kebesaran-Mu hendak kuceritakan.</p><p><b>7</b> Peringatan kepada besarnya kebajikan-Mu akan dimasyhurkan mereka, dan tentang keadilan-Mu mereka akan bersorak-sorai.</p><p><b>8</b> TUHAN itu pengasih dan penyayang, panjang sabar dan besar kasih setia-Nya.</p><p><b>9</b> TUHAN itu baik kepada semua orang, dan penuh rahmat terhadap segala yang dijadikan-Nya.</p><p><b>10</b> Segala yang Kaujadikan itu akan bersyukur kepada-Mu, ya TUHAN, dan orang-orang yang Kaukasihi akan memuji Engkau.</p><p><b>11</b> Mereka akan mengumumkan kemuliaan kerajaan-Mu, dan akan membicarakan keperkasaan-Mu,</p><p><b>12</b> untuk memberitahukan keperkasaan-Mu kepada anak-anak manusia, dan kemuliaan semarak kerajaan-Mu.</p><p><b>13</b> Kerajaan-Mu ialah kerajaan segala abad, dan pemerintahan-Mu tetap melalui segala keturunan. TUHAN setia dalam segala perkataan-Nya dan penuh kasih setia dalam segala perbuatan-Nya.</p><p><b>14</b> TUHAN itu penopang bagi semua orang yang jatuh dan penegak bagi semua orang yang tertunduk.</p><p><b>15</b> Mata sekalian orang menantikan Engkau, dan Engkaupun memberi mereka makanan pada waktunya;</p><p><b>16</b> Engkau yang membuka tangan-Mu dan yang berkenan mengenyangkan segala yang hidup.</p><p><b>17</b> TUHAN itu adil dalam segala jalan-Nya dan penuh kasih setia dalam segala perbuatan-Nya.</p><p><b>18</b> TUHAN dekat pada setiap orang yang berseru kepada-Nya, pada setiap orang yang berseru kepada-Nya dalam kesetiaan.</p><p><b>19</b> Ia melakukan kehendak orang-orang yang takut akan Dia, mendengarkan teriak mereka minta tolong dan menyelamatkan mereka.</p><p><b>20</b> TUHAN menjaga semua orang yang mengasihi-Nya, tetapi semua orang fasik akan dibinasakan-Nya.</p><p><b>21</b> Mulutku mengucapkan puji-pujian kepada TUHAN dan biarlah segala makhluk memuji nama-Nya yang kudus untuk seterusnya dan selamanya.</p>
+<script>
+  const chapterCounts = {
+    "Kejadian": 50, "Keluaran": 40, "Imamat": 27, "Bilangan": 36, "Ulangan": 34,
+    "Yosua": 24, "Hakim-Hakim": 21, "Rut": 4,
+    "1_Samuel": 31, "2_Samuel": 24,
+    "1_Raja-Raja": 22, "2_Raja-Raja": 25,
+    "1_Tawarikh": 29, "2_Tawarikh": 36,
+    "Ezra": 10, "Nehemia": 13, "Ester": 10,
+    "Ayub": 42, "Mazmur": 150, "Amsal": 31, "Pengkhotbah": 12, "Kidung_Agung": 8,
+    "Yesaya": 66, "Yeremia": 52, "Ratapan": 5,
+    "Yehezkiel": 48, "Daniel": 12,
+    "Hosea": 14, "Yoel": 3, "Amos": 9, "Obaja": 1, "Yunus": 4,
+    "Mikha": 7, "Nahum": 3, "Habakuk": 3, "Zefanya": 3, "Hagai": 2,
+    "Zakharia": 14, "Maleakhi": 4,
+
+    "Matius": 28, "Markus": 16, "Lukas": 24, "Yohanes": 21,
+    "Kisah_Para_Rasul": 28,
+    "Roma": 16, "1_Korintus": 16, "2_Korintus": 13,
+    "Galatia": 6, "Efesus": 6, "Filipi": 4, "Kolose": 4,
+    "1_Tesalonika": 5, "2_Tesalonika": 3,
+    "1_Timotius": 6, "2_Timotius": 4,
+    "Titus": 3, "Filemon": 1,
+    "Ibrani": 13, "Yakobus": 5,
+    "1_Petrus": 5, "2_Petrus": 3,
+    "1_Yohanes": 5, "2_Yohanes": 1, "3_Yohanes": 1,
+    "Yudas": 1, "Wahyu": 22
+  };
+
+  function updateChapters() {
+    const book = document.getElementById("bookSelect").value;
+    const chapterSelect = document.getElementById("chapterSelect");
+    chapterSelect.innerHTML = '<option value="">-- Pilih Pasal --</option>';
+
+    if (book && chapterCounts[book]) {
+      for (let i = 1; i <= chapterCounts[book]; i++) {
+        const opt = document.createElement("option");
+        opt.value = i;
+        opt.textContent = i;
+        chapterSelect.appendChild(opt);
+      }
+      chapterSelect.disabled = false;
+    } else {
+      chapterSelect.disabled = true;
+    }
+  }
+
+  function goToChapter() {
+    const book = document.getElementById("bookSelect").value;
+    const chapter = document.getElementById("chapterSelect").value;
+    if (book && chapter) {
+      window.location.href = `${book}_${chapter}.html`;
+    }
+  }
+</script>
+
+
+<!-- PREV/NEXT SCRIPT START -->
+<script>
+  function getCurrentBookAndChapter() {
+    const file = (window.location.pathname.split("/").pop() || "").replace(".html","");
+    const parts = file.split("_");
+    const chapter = parseInt(parts.pop(), 10);
+    const book = parts.join("_");
+    return { book, chapter };
+  }
+
+  function prevChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    if (chapter > 1) {
+      window.location.href = `${book}_${chapter - 1}.html`;
+    }
+  }
+
+  function nextChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    // assume chapterCounts already exists from your dropdown script
+    const max = chapterCounts[book];
+    if (chapter < max) {
+      window.location.href = `${book}_${chapter + 1}.html`;
+    }
+  }
+</script>
+<!-- PREV/NEXT SCRIPT END -->
+
+</body></html>
