@@ -1,0 +1,128 @@
+<html><head><meta charset='UTF-8'><title>2 Korintus 2</title></head><body><h1>2 Korintus 2</h1><div style="margin: 10px; text-align: center;">
+<select id="bookSelect" onchange="updateChapters()">
+<option value="">-- Pilih Kitab --</option>
+<option value="Matius">Matius</option>
+<option value="Markus">Markus</option>
+<option value="Lukas">Lukas</option>
+<option value="Yohanes">Yohanes</option>
+<option value="Kisah_Para_Rasul">Kisah Para Rasul</option>
+<option value="Roma">Roma</option>
+<option value="1_Korintus">1 Korintus</option>
+<option value="2_Korintus">2 Korintus</option>
+<option value="Galatia">Galatia</option>
+<option value="Efesus">Efesus</option>
+<option value="Filipi">Filipi</option>
+<option value="Kolose">Kolose</option>
+<option value="1_Tesalonika">1 Tesalonika</option>
+<option value="2_Tesalonika">2 Tesalonika</option>
+<option value="1_Timotius">1 Timotius</option>
+<option value="2_Timotius">2 Timotius</option>
+<option value="Titus">Titus</option>
+<option value="Filemon">Filemon</option>
+<option value="Ibrani">Ibrani</option>
+<option value="Yakobus">Yakobus</option>
+<option value="1_Petrus">1 Petrus</option>
+<option value="2_Petrus">2 Petrus</option>
+<option value="1_Yohanes">1 Yohanes</option>
+<option value="2_Yohanes">2 Yohanes</option>
+<option value="3_Yohanes">3 Yohanes</option>
+<option value="Yudas">Yudas</option>
+<option value="Wahyu">Wahyu</option>
+</select>
+
+<div style="margin-top:10px; text-align:center;">
+  <button onclick="prevChapter()">⬅️ Pasal Sebelumnya</button>
+  <button onclick="nextChapter()">Pasal Selanjutnya ➡️</button>
+</div>
+<select id="chapterSelect" disabled onchange="goToChapter()">
+<option value="">-- Pilih Pasal --</option>
+</select>
+<a href="../old/Kejadian_1.html" style="margin-left:10px;">📖 Pindah ke Perjanjian Lama</a>
+</div><p><b>1</b> Aku telah mengambil keputusan di dalam hatiku, bahwa aku tidak akan datang lagi kepadamu dalam dukacita.</p><p><b>2</b> Sebab, jika aku mendukakan hatimu, siapa lagi yang dapat membuat aku menjadi gembira selain dia yang berdukacita karena aku.</p><p><b>3</b> Dan justru itulah maksud suratku ini, yaitu supaya jika aku datang, jangan aku berdukacita oleh mereka, yang harus membuat aku menjadi gembira. Sebab aku yakin tentang kamu semua, bahwa sukacitaku adalah juga sukacitamu.</p><p><b>4</b> Aku menulis kepada kamu dengan hati yang sangat cemas dan sesak dan dengan mencucurkan banyak air mata, bukan supaya kamu bersedih hati, tetapi supaya kamu tahu betapa besarnya kasihku kepada kamu semua.</p><p><b>5</b> Tetapi jika ada orang yang menyebabkan kesedihan, maka bukan hatiku yang disedihkannya, melainkan hati kamu sekalian, atau sekurang-kurangnya--supaya jangan aku melebih-lebihkan--,hati beberapa orang di antara kamu.</p><p><b>6</b> Bagi orang yang demikian sudahlah cukup tegoran dari sebagian besar dari kamu,</p><p><b>7</b> sehingga kamu sebaliknya harus mengampuni dan menghibur dia, supaya ia jangan binasa oleh kesedihan yang terlampau berat.</p><p><b>8</b> Sebab itu aku menasihatkan kamu, supaya kamu sungguh-sungguh mengasihi dia.</p><p><b>9</b> Sebab justru itulah maksudnya aku menulis surat kepada kamu, yaitu untuk menguji kamu, apakah kamu taat dalam segala sesuatu.</p><p><b>10</b> Sebab barangsiapa yang kamu ampuni kesalahannya, aku mengampuninya juga. Sebab jika aku mengampuni, --seandainya ada yang harus kuampuni--,maka hal itu kubuat oleh karena kamu di hadapan Kristus,</p><p><b>11</b> supaya Iblis jangan beroleh keuntungan atas kita, sebab kita tahu apa maksudnya.</p><p><b>12</b> Ketika aku tiba di Troas untuk memberitakan Injil Kristus, aku dapati, bahwa Tuhan telah membuka jalan untuk pekerjaan di sana.</p><p><b>13</b> Tetapi hatiku tidak merasa tenang, karena aku tidak menjumpai saudaraku Titus. Sebab itu aku minta diri dan berangkat ke Makedonia.</p><p><b>14</b> Tetapi syukur bagi Allah, yang dalam Kristus selalu membawa kami di jalan kemenangan-Nya. Dengan perantaraan kami Ia menyebarkan keharuman pengenalan akan Dia di mana-mana.</p><p><b>15</b> Sebab bagi Allah kami adalah bau yang harum dari Kristus di tengah-tengah mereka yang diselamatkan dan di antara mereka yang binasa.</p><p><b>16</b> Bagi yang terakhir kami adalah bau kematian yang mematikan dan bagi yang pertama bau kehidupan yang menghidupkan. Tetapi siapakah yang sanggup menunaikan tugas yang demikian?</p><p><b>17</b> Sebab kami tidak sama dengan banyak orang lain yang mencari keuntungan dari firman Allah. Sebaliknya dalam Kristus kami berbicara sebagaimana mestinya dengan maksud-maksud murni atas perintah Allah dan di hadapan-Nya.</p>
+<script>
+  const chapterCounts = {
+    "Kejadian": 50, "Keluaran": 40, "Imamat": 27, "Bilangan": 36, "Ulangan": 34,
+    "Yosua": 24, "Hakim-Hakim": 21, "Rut": 4,
+    "1_Samuel": 31, "2_Samuel": 24,
+    "1_Raja-Raja": 22, "2_Raja-Raja": 25,
+    "1_Tawarikh": 29, "2_Tawarikh": 36,
+    "Ezra": 10, "Nehemia": 13, "Ester": 10,
+    "Ayub": 42, "Mazmur": 150, "Amsal": 31, "Pengkhotbah": 12, "Kidung_Agung": 8,
+    "Yesaya": 66, "Yeremia": 52, "Ratapan": 5,
+    "Yehezkiel": 48, "Daniel": 12,
+    "Hosea": 14, "Yoel": 3, "Amos": 9, "Obaja": 1, "Yunus": 4,
+    "Mikha": 7, "Nahum": 3, "Habakuk": 3, "Zefanya": 3, "Hagai": 2,
+    "Zakharia": 14, "Maleakhi": 4,
+
+    "Matius": 28, "Markus": 16, "Lukas": 24, "Yohanes": 21,
+    "Kisah_Para_Rasul": 28,
+    "Roma": 16, "1_Korintus": 16, "2_Korintus": 13,
+    "Galatia": 6, "Efesus": 6, "Filipi": 4, "Kolose": 4,
+    "1_Tesalonika": 5, "2_Tesalonika": 3,
+    "1_Timotius": 6, "2_Timotius": 4,
+    "Titus": 3, "Filemon": 1,
+    "Ibrani": 13, "Yakobus": 5,
+    "1_Petrus": 5, "2_Petrus": 3,
+    "1_Yohanes": 5, "2_Yohanes": 1, "3_Yohanes": 1,
+    "Yudas": 1, "Wahyu": 22
+  };
+
+  function updateChapters() {
+    const book = document.getElementById("bookSelect").value;
+    const chapterSelect = document.getElementById("chapterSelect");
+    chapterSelect.innerHTML = '<option value="">-- Pilih Pasal --</option>';
+
+    if (book && chapterCounts[book]) {
+      for (let i = 1; i <= chapterCounts[book]; i++) {
+        const opt = document.createElement("option");
+        opt.value = i;
+        opt.textContent = i;
+        chapterSelect.appendChild(opt);
+      }
+      chapterSelect.disabled = false;
+    } else {
+      chapterSelect.disabled = true;
+    }
+  }
+
+  function goToChapter() {
+    const book = document.getElementById("bookSelect").value;
+    const chapter = document.getElementById("chapterSelect").value;
+    if (book && chapter) {
+      window.location.href = `${book}_${chapter}.html`;
+    }
+  }
+</script>
+
+
+<!-- PREV/NEXT SCRIPT START -->
+<script>
+  function getCurrentBookAndChapter() {
+    const file = (window.location.pathname.split("/").pop() || "").replace(".html","");
+    const parts = file.split("_");
+    const chapter = parseInt(parts.pop(), 10);
+    const book = parts.join("_");
+    return { book, chapter };
+  }
+
+  function prevChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    if (chapter > 1) {
+      window.location.href = `${book}_${chapter - 1}.html`;
+    }
+  }
+
+  function nextChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    // assume chapterCounts already exists from your dropdown script
+    const max = chapterCounts[book];
+    if (chapter < max) {
+      window.location.href = `${book}_${chapter + 1}.html`;
+    }
+  }
+</script>
+<!-- PREV/NEXT SCRIPT END -->
+
+</body></html>

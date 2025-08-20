@@ -1,0 +1,128 @@
+<html><head><meta charset='UTF-8'><title>2 Korintus 10</title></head><body><h1>2 Korintus 10</h1><div style="margin: 10px; text-align: center;">
+<select id="bookSelect" onchange="updateChapters()">
+<option value="">-- Pilih Kitab --</option>
+<option value="Matius">Matius</option>
+<option value="Markus">Markus</option>
+<option value="Lukas">Lukas</option>
+<option value="Yohanes">Yohanes</option>
+<option value="Kisah_Para_Rasul">Kisah Para Rasul</option>
+<option value="Roma">Roma</option>
+<option value="1_Korintus">1 Korintus</option>
+<option value="2_Korintus">2 Korintus</option>
+<option value="Galatia">Galatia</option>
+<option value="Efesus">Efesus</option>
+<option value="Filipi">Filipi</option>
+<option value="Kolose">Kolose</option>
+<option value="1_Tesalonika">1 Tesalonika</option>
+<option value="2_Tesalonika">2 Tesalonika</option>
+<option value="1_Timotius">1 Timotius</option>
+<option value="2_Timotius">2 Timotius</option>
+<option value="Titus">Titus</option>
+<option value="Filemon">Filemon</option>
+<option value="Ibrani">Ibrani</option>
+<option value="Yakobus">Yakobus</option>
+<option value="1_Petrus">1 Petrus</option>
+<option value="2_Petrus">2 Petrus</option>
+<option value="1_Yohanes">1 Yohanes</option>
+<option value="2_Yohanes">2 Yohanes</option>
+<option value="3_Yohanes">3 Yohanes</option>
+<option value="Yudas">Yudas</option>
+<option value="Wahyu">Wahyu</option>
+</select>
+
+<div style="margin-top:10px; text-align:center;">
+  <button onclick="prevChapter()">⬅️ Pasal Sebelumnya</button>
+  <button onclick="nextChapter()">Pasal Selanjutnya ➡️</button>
+</div>
+<select id="chapterSelect" disabled onchange="goToChapter()">
+<option value="">-- Pilih Pasal --</option>
+</select>
+<a href="../old/Kejadian_1.html" style="margin-left:10px;">📖 Pindah ke Perjanjian Lama</a>
+</div><p><b>1</b> Aku, Paulus, seorang yang tidak berani bila berhadapan muka dengan kamu, tetapi berani terhadap kamu bila berjauhan, aku memperingatkan kamu demi Kristus yang lemah lembut dan ramah.</p><p><b>2</b> Aku meminta kepada kamu: jangan kamu memaksa aku untuk menunjukkan keberanianku dari dekat, sebagaimana aku berniat bertindak keras terhadap orang-orang tertentu yang menyangka, bahwa kami hidup secara duniawi.</p><p><b>3</b> Memang kami masih hidup di dunia, tetapi kami tidak berjuang secara duniawi,</p><p><b>4</b> karena senjata kami dalam perjuangan bukanlah senjata duniawi, melainkan senjata yang diperlengkapi dengan kuasa Allah, yang sanggup untuk meruntuhkan benteng-benteng.</p><p><b>5</b> Kami mematahkan setiap siasat orang dan merubuhkan setiap kubu yang dibangun oleh keangkuhan manusia untuk menentang pengenalan akan Allah. Kami menawan segala pikiran dan menaklukkannya kepada Kristus,</p><p><b>6</b> dan kami siap sedia juga untuk menghukum setiap kedurhakaan, bila ketaatan kamu telah menjadi sempurna.</p><p><b>7</b> Tengoklah yang nyata di depan mata kamu! Kalau ada seorang benar-benar yakin, bahwa ia adalah milik Kristus, hendaklah ia berpikir di dalam hatinya, bahwa kami juga adalah milik Kristus sama seperti dia.</p><p><b>8</b> Bahkan, jikalau aku agak berlebih-lebihan bermegah atas kuasa, yang dikaruniakan Tuhan kepada kami untuk membangun dan bukan untuk meruntuhkan kamu, maka dalam hal itu aku tidak akan mendapat malu.</p><p><b>9</b> Tetapi aku tidak mau kelihatan seolah-olah aku menakut-nakuti kamu dengan surat-suratku.</p><p><b>10</b> Sebab, kata orang, surat-suratnya memang tegas dan keras, tetapi bila berhadapan muka sikapnya lemah dan perkataan-perkataannya tidak berarti.</p><p><b>11</b> Tetapi hendaklah orang-orang yang berkata demikian menginsafi, bahwa tindakan kami, bila berhadapan muka, sama seperti perkataan kami dalam surat-surat kami, bila tidak berhadapan muka.</p><p><b>12</b> Memang kami tidak berani menggolongkan diri kepada atau membandingkan diri dengan orang-orang tertentu yang memujikan diri sendiri. Mereka mengukur dirinya dengan ukuran mereka sendiri dan membandingkan dirinya dengan diri mereka sendiri. Alangkah bodohnya mereka!</p><p><b>13</b> Sebaliknya kami tidak mau bermegah melampaui batas, melainkan tetap di dalam batas-batas daerah kerja yang dipatok Allah bagi kami, yang meluas sampai kepada kamu juga.</p><p><b>14</b> Sebab dalam memberitakan Injil Kristus kami telah sampai kepada kamu, sehingga kami tidak melewati batas daerah kerja kami, seolah-olah kami belum sampai kepada kamu.</p><p><b>15</b> Kami tidak bermegah atas pekerjaan yang dilakukan oleh orang lain di daerah kerja yang tidak dipatok untuk kami. Tetapi kami berharap, bahwa apabila imanmu makin bertumbuh, kami akan mendapat penghormatan lebih besar lagi di antara kamu, jika dibandingkan dengan daerah kerja yang dipatok untuk kami.</p><p><b>16</b> Ya, kami hidup, supaya kami dapat memberitakan Injil di daerah-daerah yang lebih jauh dari pada daerah kamu dan tidak bermegah atas hasil-hasil yang dicapai orang lain di daerah kerja yang dipatok untuk mereka.</p><p><b>17</b> "Tetapi barangsiapa bermegah, hendaklah ia bermegah di dalam Tuhan."</p><p><b>18</b> Sebab bukan orang yang memuji diri yang tahan uji, melainkan orang yang dipuji Tuhan.</p>
+<script>
+  const chapterCounts = {
+    "Kejadian": 50, "Keluaran": 40, "Imamat": 27, "Bilangan": 36, "Ulangan": 34,
+    "Yosua": 24, "Hakim-Hakim": 21, "Rut": 4,
+    "1_Samuel": 31, "2_Samuel": 24,
+    "1_Raja-Raja": 22, "2_Raja-Raja": 25,
+    "1_Tawarikh": 29, "2_Tawarikh": 36,
+    "Ezra": 10, "Nehemia": 13, "Ester": 10,
+    "Ayub": 42, "Mazmur": 150, "Amsal": 31, "Pengkhotbah": 12, "Kidung_Agung": 8,
+    "Yesaya": 66, "Yeremia": 52, "Ratapan": 5,
+    "Yehezkiel": 48, "Daniel": 12,
+    "Hosea": 14, "Yoel": 3, "Amos": 9, "Obaja": 1, "Yunus": 4,
+    "Mikha": 7, "Nahum": 3, "Habakuk": 3, "Zefanya": 3, "Hagai": 2,
+    "Zakharia": 14, "Maleakhi": 4,
+
+    "Matius": 28, "Markus": 16, "Lukas": 24, "Yohanes": 21,
+    "Kisah_Para_Rasul": 28,
+    "Roma": 16, "1_Korintus": 16, "2_Korintus": 13,
+    "Galatia": 6, "Efesus": 6, "Filipi": 4, "Kolose": 4,
+    "1_Tesalonika": 5, "2_Tesalonika": 3,
+    "1_Timotius": 6, "2_Timotius": 4,
+    "Titus": 3, "Filemon": 1,
+    "Ibrani": 13, "Yakobus": 5,
+    "1_Petrus": 5, "2_Petrus": 3,
+    "1_Yohanes": 5, "2_Yohanes": 1, "3_Yohanes": 1,
+    "Yudas": 1, "Wahyu": 22
+  };
+
+  function updateChapters() {
+    const book = document.getElementById("bookSelect").value;
+    const chapterSelect = document.getElementById("chapterSelect");
+    chapterSelect.innerHTML = '<option value="">-- Pilih Pasal --</option>';
+
+    if (book && chapterCounts[book]) {
+      for (let i = 1; i <= chapterCounts[book]; i++) {
+        const opt = document.createElement("option");
+        opt.value = i;
+        opt.textContent = i;
+        chapterSelect.appendChild(opt);
+      }
+      chapterSelect.disabled = false;
+    } else {
+      chapterSelect.disabled = true;
+    }
+  }
+
+  function goToChapter() {
+    const book = document.getElementById("bookSelect").value;
+    const chapter = document.getElementById("chapterSelect").value;
+    if (book && chapter) {
+      window.location.href = `${book}_${chapter}.html`;
+    }
+  }
+</script>
+
+
+<!-- PREV/NEXT SCRIPT START -->
+<script>
+  function getCurrentBookAndChapter() {
+    const file = (window.location.pathname.split("/").pop() || "").replace(".html","");
+    const parts = file.split("_");
+    const chapter = parseInt(parts.pop(), 10);
+    const book = parts.join("_");
+    return { book, chapter };
+  }
+
+  function prevChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    if (chapter > 1) {
+      window.location.href = `${book}_${chapter - 1}.html`;
+    }
+  }
+
+  function nextChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    // assume chapterCounts already exists from your dropdown script
+    const max = chapterCounts[book];
+    if (chapter < max) {
+      window.location.href = `${book}_${chapter + 1}.html`;
+    }
+  }
+</script>
+<!-- PREV/NEXT SCRIPT END -->
+
+</body></html>

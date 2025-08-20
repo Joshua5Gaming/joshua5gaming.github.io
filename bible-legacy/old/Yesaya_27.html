@@ -1,0 +1,140 @@
+<html><head><meta charset='UTF-8'><title>Yesaya 27</title></head><body><h1>Yesaya 27</h1><div style="margin: 10px; text-align: center;">
+<select id="bookSelect" onchange="updateChapters()">
+<option value="">-- Pilih Kitab --</option>
+<option value="Kejadian">Kejadian</option>
+<option value="Keluaran">Keluaran</option>
+<option value="Imamat">Imamat</option>
+<option value="Bilangan">Bilangan</option>
+<option value="Ulangan">Ulangan</option>
+<option value="Yosua">Yosua</option>
+<option value="Hakim-Hakim">Hakim-Hakim</option>
+<option value="Rut">Rut</option>
+<option value="1_Samuel">1 Samuel</option>
+<option value="2_Samuel">2 Samuel</option>
+<option value="1_Raja-Raja">1 Raja-Raja</option>
+<option value="2_Raja-Raja">2 Raja-Raja</option>
+<option value="1_Tawarikh">1 Tawarikh</option>
+<option value="2_Tawarikh">2 Tawarikh</option>
+<option value="Ezra">Ezra</option>
+<option value="Nehemia">Nehemia</option>
+<option value="Ester">Ester</option>
+<option value="Ayub">Ayub</option>
+<option value="Mazmur">Mazmur</option>
+<option value="Amsal">Amsal</option>
+<option value="Pengkhotbah">Pengkhotbah</option>
+<option value="Kidung_Agung">Kidung Agung</option>
+<option value="Yesaya">Yesaya</option>
+<option value="Yeremia">Yeremia</option>
+<option value="Ratapan">Ratapan</option>
+<option value="Yehezkiel">Yehezkiel</option>
+<option value="Daniel">Daniel</option>
+<option value="Hosea">Hosea</option>
+<option value="Yoel">Yoel</option>
+<option value="Amos">Amos</option>
+<option value="Obaja">Obaja</option>
+<option value="Yunus">Yunus</option>
+<option value="Mikha">Mikha</option>
+<option value="Nahum">Nahum</option>
+<option value="Habakuk">Habakuk</option>
+<option value="Zefanya">Zefanya</option>
+<option value="Hagai">Hagai</option>
+<option value="Zakharia">Zakharia</option>
+<option value="Maleakhi">Maleakhi</option>
+</select>
+
+<div style="margin-top:10px; text-align:center;">
+  <button onclick="prevChapter()">⬅️ Pasal Sebelumnya</button>
+  <button onclick="nextChapter()">Pasal Selanjutnya ➡️</button>
+</div>
+<select id="chapterSelect" disabled onchange="goToChapter()">
+<option value="">-- Pilih Pasal --</option>
+</select>
+<a href="../new/Matius_1.html" style="margin-left:10px;">📖 Pindah ke Perjanjian Baru</a>
+</div><p><b>1</b> Pada waktu itu TUHAN akan melaksanakan hukuman dengan pedang-Nya yang keras, besar dan kuat atas Lewiatan, ular yang meluncur, atas Lewiatan, ular yang melingkar, dan Ia akan membunuh ular naga yang di laut.</p><p><b>2</b> Pada waktu itu akan dikatakan: "Bernyanyilah tentang kebun anggur yang elok!</p><p><b>3</b> Aku, TUHAN, penjaganya; setiap saat Aku menyiraminya. Supaya jangan orang mengganggunya, siang malam Aku menjaganya;</p><p><b>4</b> kehangatan murka tiada pada-Ku. Sekiranya tampak kepada-Ku puteri malu dan rumput, Aku akan bertindak memeranginya dan akan membakarnya sekaligus,</p><p><b>5</b> kecuali kalau mereka mencari perlindungan kepada-Ku dan mencari damai dengan Aku, ya mencari damai dengan Aku!"</p><p><b>6</b> Pada hari-hari yang akan datang, Yakub akan berakar, Israel akan berkembang dan bertunas dan memenuhi muka bumi dengan hasilnya.</p><p><b>7</b> Apakah TUHAN memusnahkan umat-Nya seperti Ia memusnahkan orang yang memusnahkan mereka? Atau apakah Ia membunuh umat-Nya seperti Ia membunuh orang yang membunuh mereka?</p><p><b>8</b> Dengan menghalau dan dengan mengusir mereka Engkau telah melawan mereka. Ia telah menyisihkan mereka dengan angin-Nya yang keras di waktu angin timur.</p><p><b>9</b> Maka beginilah akan dihapuskan kesalahan Yakub dan inilah buahnya kalau ia menjauhkan dosanya: ia akan membuat segala batu mezbah seperti batu-batu kapur yang dipecah-pecahkan, sehingga tiada lagi tiang-tiang berhala dan pedupaan-pedupaan yang tinggal berdiri.</p><p><b>10</b> Sebab kota yang berkubu itu terpencil, suatu tempat kediaman yang dikosongkan dan ditinggalkan seperti padang gurun; anak lembu akan makan rumput dan berbaring di situ menghabiskan dahan-dahan pohon.</p><p><b>11</b> Apabila ranting-rantingnya sudah kering, maka akan dipatahkan; perempuan-perempuan akan datang dan menyalakannya. Sebab inilah suatu bangsa yang tidak berakal budi, itulah sebabnya dia tidak disayangi oleh Dia yang menjadikannya dan tidak dikasihi oleh Dia yang membentuknya.</p><p><b>12</b> Maka pada waktu itu TUHAN akan mengirik mulai dari sungai Efrat sampai sungai Mesir, dan kamu ini akan dikumpulkan satu demi satu, hai orang Israel!</p><p><b>13</b> Pada waktu itu sangkakala besar akan ditiup, dan akan datang mereka yang hilang di tanah Asyur serta mereka yang terbuang ke tanah Mesir untuk sujud menyembah kepada TUHAN di gunung yang kudus, di Yerusalem.</p>
+<script>
+  const chapterCounts = {
+    "Kejadian": 50, "Keluaran": 40, "Imamat": 27, "Bilangan": 36, "Ulangan": 34,
+    "Yosua": 24, "Hakim-Hakim": 21, "Rut": 4,
+    "1_Samuel": 31, "2_Samuel": 24,
+    "1_Raja-Raja": 22, "2_Raja-Raja": 25,
+    "1_Tawarikh": 29, "2_Tawarikh": 36,
+    "Ezra": 10, "Nehemia": 13, "Ester": 10,
+    "Ayub": 42, "Mazmur": 150, "Amsal": 31, "Pengkhotbah": 12, "Kidung_Agung": 8,
+    "Yesaya": 66, "Yeremia": 52, "Ratapan": 5,
+    "Yehezkiel": 48, "Daniel": 12,
+    "Hosea": 14, "Yoel": 3, "Amos": 9, "Obaja": 1, "Yunus": 4,
+    "Mikha": 7, "Nahum": 3, "Habakuk": 3, "Zefanya": 3, "Hagai": 2,
+    "Zakharia": 14, "Maleakhi": 4,
+
+    "Matius": 28, "Markus": 16, "Lukas": 24, "Yohanes": 21,
+    "Kisah_Para_Rasul": 28,
+    "Roma": 16, "1_Korintus": 16, "2_Korintus": 13,
+    "Galatia": 6, "Efesus": 6, "Filipi": 4, "Kolose": 4,
+    "1_Tesalonika": 5, "2_Tesalonika": 3,
+    "1_Timotius": 6, "2_Timotius": 4,
+    "Titus": 3, "Filemon": 1,
+    "Ibrani": 13, "Yakobus": 5,
+    "1_Petrus": 5, "2_Petrus": 3,
+    "1_Yohanes": 5, "2_Yohanes": 1, "3_Yohanes": 1,
+    "Yudas": 1, "Wahyu": 22
+  };
+
+  function updateChapters() {
+    const book = document.getElementById("bookSelect").value;
+    const chapterSelect = document.getElementById("chapterSelect");
+    chapterSelect.innerHTML = '<option value="">-- Pilih Pasal --</option>';
+
+    if (book && chapterCounts[book]) {
+      for (let i = 1; i <= chapterCounts[book]; i++) {
+        const opt = document.createElement("option");
+        opt.value = i;
+        opt.textContent = i;
+        chapterSelect.appendChild(opt);
+      }
+      chapterSelect.disabled = false;
+    } else {
+      chapterSelect.disabled = true;
+    }
+  }
+
+  function goToChapter() {
+    const book = document.getElementById("bookSelect").value;
+    const chapter = document.getElementById("chapterSelect").value;
+    if (book && chapter) {
+      window.location.href = `${book}_${chapter}.html`;
+    }
+  }
+</script>
+
+
+<!-- PREV/NEXT SCRIPT START -->
+<script>
+  function getCurrentBookAndChapter() {
+    const file = (window.location.pathname.split("/").pop() || "").replace(".html","");
+    const parts = file.split("_");
+    const chapter = parseInt(parts.pop(), 10);
+    const book = parts.join("_");
+    return { book, chapter };
+  }
+
+  function prevChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    if (chapter > 1) {
+      window.location.href = `${book}_${chapter - 1}.html`;
+    }
+  }
+
+  function nextChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    // assume chapterCounts already exists from your dropdown script
+    const max = chapterCounts[book];
+    if (chapter < max) {
+      window.location.href = `${book}_${chapter + 1}.html`;
+    }
+  }
+</script>
+<!-- PREV/NEXT SCRIPT END -->
+
+</body></html>

@@ -1,4 +1,52 @@
-<html><head><meta charset='UTF-8'><title>Pengkhotbah 8</title></head><body><h1>Pengkhotbah 8</h1><div style="margin: 10px; text-align: center;">
+<html><head><meta charset='UTF-8'><title>Pengkhotbah 8</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f3f3;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  background: white;
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin: 15px 0;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.menu select, .menu button, .menu a {
+  font-size: 1.1rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #666;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+.menu button:hover {
+  background: #e0e0e0;
+}
+.menu a {
+  text-decoration: none;
+  background: #eee;
+}
+</style>
+
+</head><body>
+<div class="container"><h1>Pengkhotbah 8</h1><div class="menu">
 <select id="bookSelect" onchange="updateChapters()">
 <option value="">-- Pilih Kitab --</option>
 <option value="Kejadian">Kejadian</option>
@@ -42,7 +90,7 @@
 <option value="Maleakhi">Maleakhi</option>
 </select>
 
-<div style="margin-top:10px; text-align:center;">
+<div >
   <button onclick="prevChapter()">⬅️ Pasal Sebelumnya</button>
   <button onclick="nextChapter()">Pasal Selanjutnya ➡️</button>
 </div>
@@ -137,4 +185,5 @@
 </script>
 <!-- PREV/NEXT SCRIPT END -->
 
+</div>
 </body></html>

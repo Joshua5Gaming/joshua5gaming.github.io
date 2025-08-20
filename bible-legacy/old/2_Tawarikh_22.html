@@ -1,0 +1,140 @@
+<html><head><meta charset='UTF-8'><title>2 Tawarikh 22</title></head><body><h1>2 Tawarikh 22</h1><div style="margin: 10px; text-align: center;">
+<select id="bookSelect" onchange="updateChapters()">
+<option value="">-- Pilih Kitab --</option>
+<option value="Kejadian">Kejadian</option>
+<option value="Keluaran">Keluaran</option>
+<option value="Imamat">Imamat</option>
+<option value="Bilangan">Bilangan</option>
+<option value="Ulangan">Ulangan</option>
+<option value="Yosua">Yosua</option>
+<option value="Hakim-Hakim">Hakim-Hakim</option>
+<option value="Rut">Rut</option>
+<option value="1_Samuel">1 Samuel</option>
+<option value="2_Samuel">2 Samuel</option>
+<option value="1_Raja-Raja">1 Raja-Raja</option>
+<option value="2_Raja-Raja">2 Raja-Raja</option>
+<option value="1_Tawarikh">1 Tawarikh</option>
+<option value="2_Tawarikh">2 Tawarikh</option>
+<option value="Ezra">Ezra</option>
+<option value="Nehemia">Nehemia</option>
+<option value="Ester">Ester</option>
+<option value="Ayub">Ayub</option>
+<option value="Mazmur">Mazmur</option>
+<option value="Amsal">Amsal</option>
+<option value="Pengkhotbah">Pengkhotbah</option>
+<option value="Kidung_Agung">Kidung Agung</option>
+<option value="Yesaya">Yesaya</option>
+<option value="Yeremia">Yeremia</option>
+<option value="Ratapan">Ratapan</option>
+<option value="Yehezkiel">Yehezkiel</option>
+<option value="Daniel">Daniel</option>
+<option value="Hosea">Hosea</option>
+<option value="Yoel">Yoel</option>
+<option value="Amos">Amos</option>
+<option value="Obaja">Obaja</option>
+<option value="Yunus">Yunus</option>
+<option value="Mikha">Mikha</option>
+<option value="Nahum">Nahum</option>
+<option value="Habakuk">Habakuk</option>
+<option value="Zefanya">Zefanya</option>
+<option value="Hagai">Hagai</option>
+<option value="Zakharia">Zakharia</option>
+<option value="Maleakhi">Maleakhi</option>
+</select>
+
+<div style="margin-top:10px; text-align:center;">
+  <button onclick="prevChapter()">⬅️ Pasal Sebelumnya</button>
+  <button onclick="nextChapter()">Pasal Selanjutnya ➡️</button>
+</div>
+<select id="chapterSelect" disabled onchange="goToChapter()">
+<option value="">-- Pilih Pasal --</option>
+</select>
+<a href="../new/Matius_1.html" style="margin-left:10px;">📖 Pindah ke Perjanjian Baru</a>
+</div><p><b>1</b> Lalu penduduk Yerusalem mengangkat Ahazia, anaknya yang bungsu, menjadi raja menggantikan dia, karena semua anaknya yang lebih tua umurnya telah dibunuh oleh gerombolan yang datang ke tempat perkemahan bersama-sama orang-orang Arab. Dengan demikian Ahazia, anak Yoram raja Yehuda, menjadi raja.</p><p><b>2</b> Ahazia berumur empat puluh dua tahun pada waktu ia menjadi raja dan setahun lamanya ia memerintah di Yerusalem. Nama ibunya ialah Atalya, cucu Omri.</p><p><b>3</b> Iapun hidup menurut kelakuan keluarga Ahab, karena ibunya menasihatinya untuk melakukan yang jahat.</p><p><b>4</b> Ia melakukan apa yang jahat di mata TUHAN sama seperti keluarga Ahab, sebab sesudah ayahnya mati mereka menjadi penasihat-penasihatnya yang mencelakakannya.</p><p><b>5</b> Atas nasihat mereka pula ia pergi bersama-sama Yoram bin Ahab, raja Israel, untuk berperang melawan Hazael, raja Aram, di Ramot-Gilead. Tetapi orang-orang Aram melukai Yoram.</p><p><b>6</b> Kemudian pulanglah ia ke Yizreel untuk diobati oleh karena luka-luka yang didapatnya di Rama pada waktu ia berperang melawan Hazael, raja Aram. Dan Ahazia, anak Yoram raja Yehuda, pergi menjenguk Yoram bin Ahab di Yizreel, karena dia sakit.</p><p><b>7</b> Telah ditentukan Allah, bahwa Ahazia akan menemui ajalnya pada waktu ia mengunjungi Yoram; maka ketika Ahazia datang, pergilah ia bersama-sama Yoram mendapatkan Yehu, cucu Nimsi, yang telah diurapi TUHAN, supaya dialah yang melenyapkan keluarga Ahab.</p><p><b>8</b> Sementara Yehu melakukan penghukuman atas keluarga Ahab, ia menjumpai pembesar-pembesar Yehuda dan anak-anak saudara-saudara Ahazia, yang melayani Ahazia. Juga mereka dibunuhnya.</p><p><b>9</b> Lalu ia mencari Ahazia; Ahazia tertangkap ketika ia bersembunyi di Samaria. Ia dibawa kepada Yehu, lalu dibunuh, tetapi dikuburkan juga, karena kata orang: "Dia ini cucu Yosafat, yang mencari TUHAN dengan segenap hatinya." Dari keluarga Ahazia tidak ada lagi yang sanggup memerintah.</p><p><b>10</b> Ketika Atalya, ibu Ahazia, melihat bahwa anaknya sudah mati, maka bangkitlah ia membinasakan semua keturunan raja dari kaum Yehuda.</p><p><b>11</b> Tetapi Yosabat, anak perempuan raja, mengambil Yoas bin Ahazia, menculik dia dari tengah-tengah anak-anak raja yang hendak dibunuh itu, memasukkan dia dengan inang penyusunya ke dalam gudang tempat tidur. Demikianlah Yosabat, anak perempuan raja Yoram, isteri imam Yoyada, --ia adalah saudara perempuan Ahazia--menyembunyikan dia terhadap Atalya, sehingga ia tidak dibunuh Atalya.</p><p><b>12</b> Maka tinggallah Yoas enam tahun lamanya bersama-sama mereka dengan bersembunyi di rumah Allah, sementara Atalya memerintah negeri.</p>
+<script>
+  const chapterCounts = {
+    "Kejadian": 50, "Keluaran": 40, "Imamat": 27, "Bilangan": 36, "Ulangan": 34,
+    "Yosua": 24, "Hakim-Hakim": 21, "Rut": 4,
+    "1_Samuel": 31, "2_Samuel": 24,
+    "1_Raja-Raja": 22, "2_Raja-Raja": 25,
+    "1_Tawarikh": 29, "2_Tawarikh": 36,
+    "Ezra": 10, "Nehemia": 13, "Ester": 10,
+    "Ayub": 42, "Mazmur": 150, "Amsal": 31, "Pengkhotbah": 12, "Kidung_Agung": 8,
+    "Yesaya": 66, "Yeremia": 52, "Ratapan": 5,
+    "Yehezkiel": 48, "Daniel": 12,
+    "Hosea": 14, "Yoel": 3, "Amos": 9, "Obaja": 1, "Yunus": 4,
+    "Mikha": 7, "Nahum": 3, "Habakuk": 3, "Zefanya": 3, "Hagai": 2,
+    "Zakharia": 14, "Maleakhi": 4,
+
+    "Matius": 28, "Markus": 16, "Lukas": 24, "Yohanes": 21,
+    "Kisah_Para_Rasul": 28,
+    "Roma": 16, "1_Korintus": 16, "2_Korintus": 13,
+    "Galatia": 6, "Efesus": 6, "Filipi": 4, "Kolose": 4,
+    "1_Tesalonika": 5, "2_Tesalonika": 3,
+    "1_Timotius": 6, "2_Timotius": 4,
+    "Titus": 3, "Filemon": 1,
+    "Ibrani": 13, "Yakobus": 5,
+    "1_Petrus": 5, "2_Petrus": 3,
+    "1_Yohanes": 5, "2_Yohanes": 1, "3_Yohanes": 1,
+    "Yudas": 1, "Wahyu": 22
+  };
+
+  function updateChapters() {
+    const book = document.getElementById("bookSelect").value;
+    const chapterSelect = document.getElementById("chapterSelect");
+    chapterSelect.innerHTML = '<option value="">-- Pilih Pasal --</option>';
+
+    if (book && chapterCounts[book]) {
+      for (let i = 1; i <= chapterCounts[book]; i++) {
+        const opt = document.createElement("option");
+        opt.value = i;
+        opt.textContent = i;
+        chapterSelect.appendChild(opt);
+      }
+      chapterSelect.disabled = false;
+    } else {
+      chapterSelect.disabled = true;
+    }
+  }
+
+  function goToChapter() {
+    const book = document.getElementById("bookSelect").value;
+    const chapter = document.getElementById("chapterSelect").value;
+    if (book && chapter) {
+      window.location.href = `${book}_${chapter}.html`;
+    }
+  }
+</script>
+
+
+<!-- PREV/NEXT SCRIPT START -->
+<script>
+  function getCurrentBookAndChapter() {
+    const file = (window.location.pathname.split("/").pop() || "").replace(".html","");
+    const parts = file.split("_");
+    const chapter = parseInt(parts.pop(), 10);
+    const book = parts.join("_");
+    return { book, chapter };
+  }
+
+  function prevChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    if (chapter > 1) {
+      window.location.href = `${book}_${chapter - 1}.html`;
+    }
+  }
+
+  function nextChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    // assume chapterCounts already exists from your dropdown script
+    const max = chapterCounts[book];
+    if (chapter < max) {
+      window.location.href = `${book}_${chapter + 1}.html`;
+    }
+  }
+</script>
+<!-- PREV/NEXT SCRIPT END -->
+
+</body></html>

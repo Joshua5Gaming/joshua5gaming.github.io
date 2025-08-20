@@ -1,0 +1,128 @@
+<html><head><meta charset='UTF-8'><title>1 Korintus 5</title></head><body><h1>1 Korintus 5</h1><div style="margin: 10px; text-align: center;">
+<select id="bookSelect" onchange="updateChapters()">
+<option value="">-- Pilih Kitab --</option>
+<option value="Matius">Matius</option>
+<option value="Markus">Markus</option>
+<option value="Lukas">Lukas</option>
+<option value="Yohanes">Yohanes</option>
+<option value="Kisah_Para_Rasul">Kisah Para Rasul</option>
+<option value="Roma">Roma</option>
+<option value="1_Korintus">1 Korintus</option>
+<option value="2_Korintus">2 Korintus</option>
+<option value="Galatia">Galatia</option>
+<option value="Efesus">Efesus</option>
+<option value="Filipi">Filipi</option>
+<option value="Kolose">Kolose</option>
+<option value="1_Tesalonika">1 Tesalonika</option>
+<option value="2_Tesalonika">2 Tesalonika</option>
+<option value="1_Timotius">1 Timotius</option>
+<option value="2_Timotius">2 Timotius</option>
+<option value="Titus">Titus</option>
+<option value="Filemon">Filemon</option>
+<option value="Ibrani">Ibrani</option>
+<option value="Yakobus">Yakobus</option>
+<option value="1_Petrus">1 Petrus</option>
+<option value="2_Petrus">2 Petrus</option>
+<option value="1_Yohanes">1 Yohanes</option>
+<option value="2_Yohanes">2 Yohanes</option>
+<option value="3_Yohanes">3 Yohanes</option>
+<option value="Yudas">Yudas</option>
+<option value="Wahyu">Wahyu</option>
+</select>
+
+<div style="margin-top:10px; text-align:center;">
+  <button onclick="prevChapter()">⬅️ Pasal Sebelumnya</button>
+  <button onclick="nextChapter()">Pasal Selanjutnya ➡️</button>
+</div>
+<select id="chapterSelect" disabled onchange="goToChapter()">
+<option value="">-- Pilih Pasal --</option>
+</select>
+<a href="../old/Kejadian_1.html" style="margin-left:10px;">📖 Pindah ke Perjanjian Lama</a>
+</div><p><b>1</b> Memang orang mendengar, bahwa ada percabulan di antara kamu, dan percabulan yang begitu rupa, seperti yang tidak terdapat sekalipun di antara bangsa-bangsa yang tidak mengenal Allah, yaitu bahwa ada orang yang hidup dengan isteri ayahnya.</p><p><b>2</b> Sekalipun demikian kamu sombong. Tidakkah lebih patut kamu berdukacita dan menjauhkan orang yang melakukan hal itu dari tengah-tengah kamu?</p><p><b>3</b> Sebab aku, sekalipun secara badani tidak hadir, tetapi secara rohani hadir, aku--sama seperti aku hadir--telah menjatuhkan hukuman atas dia, yang telah melakukan hal yang semacam itu.</p><p><b>4</b> Bilamana kita berkumpul dalam roh, kamu bersama-sama dengan aku, dengan kuasa Yesus, Tuhan kita,</p><p><b>5</b> orang itu harus kita serahkan dalam nama Tuhan Yesus kepada Iblis, sehingga binasa tubuhnya, agar rohnya diselamatkan pada hari Tuhan.</p><p><b>6</b> Kemegahanmu tidak baik. Tidak tahukah kamu, bahwa sedikit ragi mengkhamiri seluruh adonan?</p><p><b>7</b> Buanglah ragi yang lama itu, supaya kamu menjadi adonan yang baru, sebab kamu memang tidak beragi. Sebab anak domba Paskah kita juga telah disembelih, yaitu Kristus.</p><p><b>8</b> Karena itu marilah kita berpesta, bukan dengan ragi yang lama, bukan pula dengan ragi keburukan dan kejahatan, tetapi dengan roti yang tidak beragi, yaitu kemurnian dan kebenaran.</p><p><b>9</b> Dalam suratku telah kutuliskan kepadamu, supaya kamu jangan bergaul dengan orang-orang cabul.</p><p><b>10</b> Yang aku maksudkan bukanlah dengan semua orang cabul pada umumnya dari dunia ini atau dengan semua orang kikir dan penipu atau dengan semua penyembah berhala, karena jika demikian kamu harus meninggalkan dunia ini.</p><p><b>11</b> Tetapi yang kutuliskan kepada kamu ialah, supaya kamu jangan bergaul dengan orang, yang sekalipun menyebut dirinya saudara, adalah orang cabul, kikir, penyembah berhala, pemfitnah, pemabuk atau penipu; dengan orang yang demikian janganlah kamu sekali-kali makan bersama-sama.</p><p><b>12</b> Sebab dengan wewenang apakah aku menghakimi mereka, yang berada di luar jemaat? Bukankah kamu hanya menghakimi mereka yang berada di dalam jemaat?</p><p><b>13</b> Mereka yang berada di luar jemaat akan dihakimi Allah. Usirlah orang yang melakukan kejahatan dari tengah-tengah kamu.</p>
+<script>
+  const chapterCounts = {
+    "Kejadian": 50, "Keluaran": 40, "Imamat": 27, "Bilangan": 36, "Ulangan": 34,
+    "Yosua": 24, "Hakim-Hakim": 21, "Rut": 4,
+    "1_Samuel": 31, "2_Samuel": 24,
+    "1_Raja-Raja": 22, "2_Raja-Raja": 25,
+    "1_Tawarikh": 29, "2_Tawarikh": 36,
+    "Ezra": 10, "Nehemia": 13, "Ester": 10,
+    "Ayub": 42, "Mazmur": 150, "Amsal": 31, "Pengkhotbah": 12, "Kidung_Agung": 8,
+    "Yesaya": 66, "Yeremia": 52, "Ratapan": 5,
+    "Yehezkiel": 48, "Daniel": 12,
+    "Hosea": 14, "Yoel": 3, "Amos": 9, "Obaja": 1, "Yunus": 4,
+    "Mikha": 7, "Nahum": 3, "Habakuk": 3, "Zefanya": 3, "Hagai": 2,
+    "Zakharia": 14, "Maleakhi": 4,
+
+    "Matius": 28, "Markus": 16, "Lukas": 24, "Yohanes": 21,
+    "Kisah_Para_Rasul": 28,
+    "Roma": 16, "1_Korintus": 16, "2_Korintus": 13,
+    "Galatia": 6, "Efesus": 6, "Filipi": 4, "Kolose": 4,
+    "1_Tesalonika": 5, "2_Tesalonika": 3,
+    "1_Timotius": 6, "2_Timotius": 4,
+    "Titus": 3, "Filemon": 1,
+    "Ibrani": 13, "Yakobus": 5,
+    "1_Petrus": 5, "2_Petrus": 3,
+    "1_Yohanes": 5, "2_Yohanes": 1, "3_Yohanes": 1,
+    "Yudas": 1, "Wahyu": 22
+  };
+
+  function updateChapters() {
+    const book = document.getElementById("bookSelect").value;
+    const chapterSelect = document.getElementById("chapterSelect");
+    chapterSelect.innerHTML = '<option value="">-- Pilih Pasal --</option>';
+
+    if (book && chapterCounts[book]) {
+      for (let i = 1; i <= chapterCounts[book]; i++) {
+        const opt = document.createElement("option");
+        opt.value = i;
+        opt.textContent = i;
+        chapterSelect.appendChild(opt);
+      }
+      chapterSelect.disabled = false;
+    } else {
+      chapterSelect.disabled = true;
+    }
+  }
+
+  function goToChapter() {
+    const book = document.getElementById("bookSelect").value;
+    const chapter = document.getElementById("chapterSelect").value;
+    if (book && chapter) {
+      window.location.href = `${book}_${chapter}.html`;
+    }
+  }
+</script>
+
+
+<!-- PREV/NEXT SCRIPT START -->
+<script>
+  function getCurrentBookAndChapter() {
+    const file = (window.location.pathname.split("/").pop() || "").replace(".html","");
+    const parts = file.split("_");
+    const chapter = parseInt(parts.pop(), 10);
+    const book = parts.join("_");
+    return { book, chapter };
+  }
+
+  function prevChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    if (chapter > 1) {
+      window.location.href = `${book}_${chapter - 1}.html`;
+    }
+  }
+
+  function nextChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    // assume chapterCounts already exists from your dropdown script
+    const max = chapterCounts[book];
+    if (chapter < max) {
+      window.location.href = `${book}_${chapter + 1}.html`;
+    }
+  }
+</script>
+<!-- PREV/NEXT SCRIPT END -->
+
+</body></html>

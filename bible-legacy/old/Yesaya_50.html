@@ -1,0 +1,140 @@
+<html><head><meta charset='UTF-8'><title>Yesaya 50</title></head><body><h1>Yesaya 50</h1><div style="margin: 10px; text-align: center;">
+<select id="bookSelect" onchange="updateChapters()">
+<option value="">-- Pilih Kitab --</option>
+<option value="Kejadian">Kejadian</option>
+<option value="Keluaran">Keluaran</option>
+<option value="Imamat">Imamat</option>
+<option value="Bilangan">Bilangan</option>
+<option value="Ulangan">Ulangan</option>
+<option value="Yosua">Yosua</option>
+<option value="Hakim-Hakim">Hakim-Hakim</option>
+<option value="Rut">Rut</option>
+<option value="1_Samuel">1 Samuel</option>
+<option value="2_Samuel">2 Samuel</option>
+<option value="1_Raja-Raja">1 Raja-Raja</option>
+<option value="2_Raja-Raja">2 Raja-Raja</option>
+<option value="1_Tawarikh">1 Tawarikh</option>
+<option value="2_Tawarikh">2 Tawarikh</option>
+<option value="Ezra">Ezra</option>
+<option value="Nehemia">Nehemia</option>
+<option value="Ester">Ester</option>
+<option value="Ayub">Ayub</option>
+<option value="Mazmur">Mazmur</option>
+<option value="Amsal">Amsal</option>
+<option value="Pengkhotbah">Pengkhotbah</option>
+<option value="Kidung_Agung">Kidung Agung</option>
+<option value="Yesaya">Yesaya</option>
+<option value="Yeremia">Yeremia</option>
+<option value="Ratapan">Ratapan</option>
+<option value="Yehezkiel">Yehezkiel</option>
+<option value="Daniel">Daniel</option>
+<option value="Hosea">Hosea</option>
+<option value="Yoel">Yoel</option>
+<option value="Amos">Amos</option>
+<option value="Obaja">Obaja</option>
+<option value="Yunus">Yunus</option>
+<option value="Mikha">Mikha</option>
+<option value="Nahum">Nahum</option>
+<option value="Habakuk">Habakuk</option>
+<option value="Zefanya">Zefanya</option>
+<option value="Hagai">Hagai</option>
+<option value="Zakharia">Zakharia</option>
+<option value="Maleakhi">Maleakhi</option>
+</select>
+
+<div style="margin-top:10px; text-align:center;">
+  <button onclick="prevChapter()">⬅️ Pasal Sebelumnya</button>
+  <button onclick="nextChapter()">Pasal Selanjutnya ➡️</button>
+</div>
+<select id="chapterSelect" disabled onchange="goToChapter()">
+<option value="">-- Pilih Pasal --</option>
+</select>
+<a href="../new/Matius_1.html" style="margin-left:10px;">📖 Pindah ke Perjanjian Baru</a>
+</div><p><b>1</b> Beginilah firman TUHAN: "Di manakah gerangan surat cerai ibumu tanda Aku telah mengusir dia? Atau kepada siapakah di antara penagih hutang-Ku Aku pernah menjual engkau? Sesungguhnya, oleh karena kesalahanmu sendiri kamu terjual dan oleh karena pelanggaranmu sendiri ibumu diusir.</p><p><b>2</b> Mengapa ketika Aku datang tidak ada orang, dan ketika Aku memanggil tidak ada yang menjawab? Mungkinkah tangan-Ku terlalu pendek untuk membebaskan atau tidak adakah kekuatan pada-Ku untuk melepaskan? Sesungguhnya, dengan hardik-Ku Aku mengeringkan laut, Aku membuat sungai-sungai menjadi padang gurun; ikan-ikannya berbau amis karena tidak ada air dan mati kehausan.</p><p><b>3</b> Aku mengenakan pakaian kelam kepada langit dan menyelimutinya dengan kain kabung."</p><p><b>4</b> Tuhan ALLAH telah memberikan kepadaku lidah seorang murid, supaya dengan perkataan aku dapat memberi semangat baru kepada orang yang letih lesu. Setiap pagi Ia mempertajam pendengaranku untuk mendengar seperti seorang murid.</p><p><b>5</b> Tuhan ALLAH telah membuka telingaku, dan aku tidak memberontak, tidak berpaling ke belakang.</p><p><b>6</b> Aku memberi punggungku kepada orang-orang yang memukul aku, dan pipiku kepada orang-orang yang mencabut janggutku. Aku tidak menyembunyikan mukaku ketika aku dinodai dan diludahi.</p><p><b>7</b> Tetapi Tuhan ALLAH menolong aku; sebab itu aku tidak mendapat noda. Sebab itu aku meneguhkan hatiku seperti keteguhan gunung batu karena aku tahu, bahwa aku tidak akan mendapat malu.</p><p><b>8</b> Dia yang menyatakan aku benar telah dekat. Siapakah yang berani berbantah dengan aku? Marilah kita tampil bersama-sama! Siapakah lawanku berperkara? Biarlah ia mendekat kepadaku!</p><p><b>9</b> Sesungguhnya, Tuhan ALLAH menolong aku; siapakah yang berani menyatakan aku bersalah? Sesungguhnya, mereka semua akan memburuk seperti pakaian yang sudah usang; ngengat akan memakan mereka.</p><p><b>10</b> Siapa di antaramu yang takut akan TUHAN dan mendengarkan suara hamba-Nya? Jika ia hidup dalam kegelapan dan tidak ada cahaya bersinar baginya, baiklah ia percaya kepada nama TUHAN dan bersandar kepada Allahnya!</p><p><b>11</b> Sesungguhnya, kamu semua yang menyalakan api dan yang memasang panah-panah api, masuklah ke dalam nyala apimu, dan ke tengah-tengah panah-panah api yang telah kamu pasang! Oleh tangan-Kulah hal itu akan terjadi atasmu; kamu akan berbaring di tempat siksaan.</p>
+<script>
+  const chapterCounts = {
+    "Kejadian": 50, "Keluaran": 40, "Imamat": 27, "Bilangan": 36, "Ulangan": 34,
+    "Yosua": 24, "Hakim-Hakim": 21, "Rut": 4,
+    "1_Samuel": 31, "2_Samuel": 24,
+    "1_Raja-Raja": 22, "2_Raja-Raja": 25,
+    "1_Tawarikh": 29, "2_Tawarikh": 36,
+    "Ezra": 10, "Nehemia": 13, "Ester": 10,
+    "Ayub": 42, "Mazmur": 150, "Amsal": 31, "Pengkhotbah": 12, "Kidung_Agung": 8,
+    "Yesaya": 66, "Yeremia": 52, "Ratapan": 5,
+    "Yehezkiel": 48, "Daniel": 12,
+    "Hosea": 14, "Yoel": 3, "Amos": 9, "Obaja": 1, "Yunus": 4,
+    "Mikha": 7, "Nahum": 3, "Habakuk": 3, "Zefanya": 3, "Hagai": 2,
+    "Zakharia": 14, "Maleakhi": 4,
+
+    "Matius": 28, "Markus": 16, "Lukas": 24, "Yohanes": 21,
+    "Kisah_Para_Rasul": 28,
+    "Roma": 16, "1_Korintus": 16, "2_Korintus": 13,
+    "Galatia": 6, "Efesus": 6, "Filipi": 4, "Kolose": 4,
+    "1_Tesalonika": 5, "2_Tesalonika": 3,
+    "1_Timotius": 6, "2_Timotius": 4,
+    "Titus": 3, "Filemon": 1,
+    "Ibrani": 13, "Yakobus": 5,
+    "1_Petrus": 5, "2_Petrus": 3,
+    "1_Yohanes": 5, "2_Yohanes": 1, "3_Yohanes": 1,
+    "Yudas": 1, "Wahyu": 22
+  };
+
+  function updateChapters() {
+    const book = document.getElementById("bookSelect").value;
+    const chapterSelect = document.getElementById("chapterSelect");
+    chapterSelect.innerHTML = '<option value="">-- Pilih Pasal --</option>';
+
+    if (book && chapterCounts[book]) {
+      for (let i = 1; i <= chapterCounts[book]; i++) {
+        const opt = document.createElement("option");
+        opt.value = i;
+        opt.textContent = i;
+        chapterSelect.appendChild(opt);
+      }
+      chapterSelect.disabled = false;
+    } else {
+      chapterSelect.disabled = true;
+    }
+  }
+
+  function goToChapter() {
+    const book = document.getElementById("bookSelect").value;
+    const chapter = document.getElementById("chapterSelect").value;
+    if (book && chapter) {
+      window.location.href = `${book}_${chapter}.html`;
+    }
+  }
+</script>
+
+
+<!-- PREV/NEXT SCRIPT START -->
+<script>
+  function getCurrentBookAndChapter() {
+    const file = (window.location.pathname.split("/").pop() || "").replace(".html","");
+    const parts = file.split("_");
+    const chapter = parseInt(parts.pop(), 10);
+    const book = parts.join("_");
+    return { book, chapter };
+  }
+
+  function prevChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    if (chapter > 1) {
+      window.location.href = `${book}_${chapter - 1}.html`;
+    }
+  }
+
+  function nextChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    // assume chapterCounts already exists from your dropdown script
+    const max = chapterCounts[book];
+    if (chapter < max) {
+      window.location.href = `${book}_${chapter + 1}.html`;
+    }
+  }
+</script>
+<!-- PREV/NEXT SCRIPT END -->
+
+</body></html>

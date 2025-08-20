@@ -1,0 +1,140 @@
+<html><head><meta charset='UTF-8'><title>Hosea 7</title></head><body><h1>Hosea 7</h1><div style="margin: 10px; text-align: center;">
+<select id="bookSelect" onchange="updateChapters()">
+<option value="">-- Pilih Kitab --</option>
+<option value="Kejadian">Kejadian</option>
+<option value="Keluaran">Keluaran</option>
+<option value="Imamat">Imamat</option>
+<option value="Bilangan">Bilangan</option>
+<option value="Ulangan">Ulangan</option>
+<option value="Yosua">Yosua</option>
+<option value="Hakim-Hakim">Hakim-Hakim</option>
+<option value="Rut">Rut</option>
+<option value="1_Samuel">1 Samuel</option>
+<option value="2_Samuel">2 Samuel</option>
+<option value="1_Raja-Raja">1 Raja-Raja</option>
+<option value="2_Raja-Raja">2 Raja-Raja</option>
+<option value="1_Tawarikh">1 Tawarikh</option>
+<option value="2_Tawarikh">2 Tawarikh</option>
+<option value="Ezra">Ezra</option>
+<option value="Nehemia">Nehemia</option>
+<option value="Ester">Ester</option>
+<option value="Ayub">Ayub</option>
+<option value="Mazmur">Mazmur</option>
+<option value="Amsal">Amsal</option>
+<option value="Pengkhotbah">Pengkhotbah</option>
+<option value="Kidung_Agung">Kidung Agung</option>
+<option value="Yesaya">Yesaya</option>
+<option value="Yeremia">Yeremia</option>
+<option value="Ratapan">Ratapan</option>
+<option value="Yehezkiel">Yehezkiel</option>
+<option value="Daniel">Daniel</option>
+<option value="Hosea">Hosea</option>
+<option value="Yoel">Yoel</option>
+<option value="Amos">Amos</option>
+<option value="Obaja">Obaja</option>
+<option value="Yunus">Yunus</option>
+<option value="Mikha">Mikha</option>
+<option value="Nahum">Nahum</option>
+<option value="Habakuk">Habakuk</option>
+<option value="Zefanya">Zefanya</option>
+<option value="Hagai">Hagai</option>
+<option value="Zakharia">Zakharia</option>
+<option value="Maleakhi">Maleakhi</option>
+</select>
+
+<div style="margin-top:10px; text-align:center;">
+  <button onclick="prevChapter()">⬅️ Pasal Sebelumnya</button>
+  <button onclick="nextChapter()">Pasal Selanjutnya ➡️</button>
+</div>
+<select id="chapterSelect" disabled onchange="goToChapter()">
+<option value="">-- Pilih Pasal --</option>
+</select>
+<a href="../new/Matius_1.html" style="margin-left:10px;">📖 Pindah ke Perjanjian Baru</a>
+</div><p><b>1</b> apabila Aku menyembuhkan Israel, maka tersingkaplah kesalahan Efraim dan kejahatan-kejahatan Samaria: sebab mereka melakukan penipuan: pencuri mendobrak masuk, gerombolan merampas di luar.</p><p><b>2</b> Dan tidak terpikir mereka bahwa Aku mengingat segala kejahatan mereka. Sekarangpun perbuatan-perbuatan mereka mengepung mereka, semuanya ada di hadapan wajah-Ku.</p><p><b>3</b> Mereka menyukakan raja dengan kejahatan mereka, dan para pemuka dengan kebohongan mereka.</p><p><b>4</b> Sekaliannya mereka orang-orang berzinah, bagaikan dapur perapian yang menyala terus, ketika tukang bakar roti berhenti membesarkan apinya, sementara ia meremas adonan sampai menjadi muai oleh ragi.</p><p><b>5</b> Pada pesta raja kita mereka membuat sakit para pemuka dengan anggur yang menghangatkan; ia bersekutu dengan para pencemooh.</p><p><b>6</b> Batin mereka seperti dapur perapian; hati mereka menyala-nyala; semalam-malaman murka mereka surut, pada waktu pagi menyala kembali seperti api yang menjilat.</p><p><b>7</b> Mereka semua sudah panas seperti dapur perapian, dan memakan habis para hakim mereka. Semua raja mereka sudah tewas, tidak ada seorang di antara mereka yang berseru kepada-Ku.</p><p><b>8</b> Efraim mencampurkan dirinya di antara bangsa-bangsa, Efraim telah menjadi roti bundar yang tidak dibalik.</p><p><b>9</b> Orang-orang luar memakan habis kekuatannya, tetapi ia sendiri tidak mengetahuinya; juga ia sudah banyak beruban, tetapi ia sendiri tidak mengetahuinya.</p><p><b>10</b> Kecongkakan Israel menjadi saksi terhadap dirinya, namun mereka tidak berbalik kepada TUHAN, Allah mereka, dan tidak mencari Dia kendati semuanya ini.</p><p><b>11</b> Efraim telah menjadi merpati tolol, tidak berakal, dengan memanggil kepada Mesir, dengan pergi kepada Asyur.</p><p><b>12</b> Apabila mereka pergi, Aku akan membentangkan jaring-Ku ke atas mereka; Aku akan menurunkan mereka seperti burung-burung di udara, Aku akan menghajar mereka karena kejahatan-kejahatan mereka.</p><p><b>13</b> Celakalah mereka, sebab mereka melarikan diri dari pada-Ku! Binasalah mereka, sebab mereka memberontak terhadap Aku! Aku ini mau menebus mereka, tetapi mereka berdusta terhadap Aku.</p><p><b>14</b> Seruan mereka kepada-Ku tidak keluar dari hatinya, tetapi mereka meratap di pembaringan mereka. Mereka menoreh-noreh diri karena gandum dan anggur, dan mereka berontak terhadap Aku.</p><p><b>15</b> Sekalipun Aku telah melatih dan menguatkan lengan-lengan mereka, namun mereka merancang kejahatan terhadap Aku.</p><p><b>16</b> Mereka berbalik kepada Baal, mereka adalah seperti busur tipu; pemuka-pemuka mereka akan tewas oleh pedang karena ucapan mereka yang kasar. Inilah yang akan menjadi olok-olok kepada mereka di tanah Mesir.</p>
+<script>
+  const chapterCounts = {
+    "Kejadian": 50, "Keluaran": 40, "Imamat": 27, "Bilangan": 36, "Ulangan": 34,
+    "Yosua": 24, "Hakim-Hakim": 21, "Rut": 4,
+    "1_Samuel": 31, "2_Samuel": 24,
+    "1_Raja-Raja": 22, "2_Raja-Raja": 25,
+    "1_Tawarikh": 29, "2_Tawarikh": 36,
+    "Ezra": 10, "Nehemia": 13, "Ester": 10,
+    "Ayub": 42, "Mazmur": 150, "Amsal": 31, "Pengkhotbah": 12, "Kidung_Agung": 8,
+    "Yesaya": 66, "Yeremia": 52, "Ratapan": 5,
+    "Yehezkiel": 48, "Daniel": 12,
+    "Hosea": 14, "Yoel": 3, "Amos": 9, "Obaja": 1, "Yunus": 4,
+    "Mikha": 7, "Nahum": 3, "Habakuk": 3, "Zefanya": 3, "Hagai": 2,
+    "Zakharia": 14, "Maleakhi": 4,
+
+    "Matius": 28, "Markus": 16, "Lukas": 24, "Yohanes": 21,
+    "Kisah_Para_Rasul": 28,
+    "Roma": 16, "1_Korintus": 16, "2_Korintus": 13,
+    "Galatia": 6, "Efesus": 6, "Filipi": 4, "Kolose": 4,
+    "1_Tesalonika": 5, "2_Tesalonika": 3,
+    "1_Timotius": 6, "2_Timotius": 4,
+    "Titus": 3, "Filemon": 1,
+    "Ibrani": 13, "Yakobus": 5,
+    "1_Petrus": 5, "2_Petrus": 3,
+    "1_Yohanes": 5, "2_Yohanes": 1, "3_Yohanes": 1,
+    "Yudas": 1, "Wahyu": 22
+  };
+
+  function updateChapters() {
+    const book = document.getElementById("bookSelect").value;
+    const chapterSelect = document.getElementById("chapterSelect");
+    chapterSelect.innerHTML = '<option value="">-- Pilih Pasal --</option>';
+
+    if (book && chapterCounts[book]) {
+      for (let i = 1; i <= chapterCounts[book]; i++) {
+        const opt = document.createElement("option");
+        opt.value = i;
+        opt.textContent = i;
+        chapterSelect.appendChild(opt);
+      }
+      chapterSelect.disabled = false;
+    } else {
+      chapterSelect.disabled = true;
+    }
+  }
+
+  function goToChapter() {
+    const book = document.getElementById("bookSelect").value;
+    const chapter = document.getElementById("chapterSelect").value;
+    if (book && chapter) {
+      window.location.href = `${book}_${chapter}.html`;
+    }
+  }
+</script>
+
+
+<!-- PREV/NEXT SCRIPT START -->
+<script>
+  function getCurrentBookAndChapter() {
+    const file = (window.location.pathname.split("/").pop() || "").replace(".html","");
+    const parts = file.split("_");
+    const chapter = parseInt(parts.pop(), 10);
+    const book = parts.join("_");
+    return { book, chapter };
+  }
+
+  function prevChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    if (chapter > 1) {
+      window.location.href = `${book}_${chapter - 1}.html`;
+    }
+  }
+
+  function nextChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    // assume chapterCounts already exists from your dropdown script
+    const max = chapterCounts[book];
+    if (chapter < max) {
+      window.location.href = `${book}_${chapter + 1}.html`;
+    }
+  }
+</script>
+<!-- PREV/NEXT SCRIPT END -->
+
+</body></html>

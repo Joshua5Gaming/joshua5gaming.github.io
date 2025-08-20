@@ -1,0 +1,140 @@
+<html><head><meta charset='UTF-8'><title>Amos 3</title></head><body><h1>Amos 3</h1><div style="margin: 10px; text-align: center;">
+<select id="bookSelect" onchange="updateChapters()">
+<option value="">-- Pilih Kitab --</option>
+<option value="Kejadian">Kejadian</option>
+<option value="Keluaran">Keluaran</option>
+<option value="Imamat">Imamat</option>
+<option value="Bilangan">Bilangan</option>
+<option value="Ulangan">Ulangan</option>
+<option value="Yosua">Yosua</option>
+<option value="Hakim-Hakim">Hakim-Hakim</option>
+<option value="Rut">Rut</option>
+<option value="1_Samuel">1 Samuel</option>
+<option value="2_Samuel">2 Samuel</option>
+<option value="1_Raja-Raja">1 Raja-Raja</option>
+<option value="2_Raja-Raja">2 Raja-Raja</option>
+<option value="1_Tawarikh">1 Tawarikh</option>
+<option value="2_Tawarikh">2 Tawarikh</option>
+<option value="Ezra">Ezra</option>
+<option value="Nehemia">Nehemia</option>
+<option value="Ester">Ester</option>
+<option value="Ayub">Ayub</option>
+<option value="Mazmur">Mazmur</option>
+<option value="Amsal">Amsal</option>
+<option value="Pengkhotbah">Pengkhotbah</option>
+<option value="Kidung_Agung">Kidung Agung</option>
+<option value="Yesaya">Yesaya</option>
+<option value="Yeremia">Yeremia</option>
+<option value="Ratapan">Ratapan</option>
+<option value="Yehezkiel">Yehezkiel</option>
+<option value="Daniel">Daniel</option>
+<option value="Hosea">Hosea</option>
+<option value="Yoel">Yoel</option>
+<option value="Amos">Amos</option>
+<option value="Obaja">Obaja</option>
+<option value="Yunus">Yunus</option>
+<option value="Mikha">Mikha</option>
+<option value="Nahum">Nahum</option>
+<option value="Habakuk">Habakuk</option>
+<option value="Zefanya">Zefanya</option>
+<option value="Hagai">Hagai</option>
+<option value="Zakharia">Zakharia</option>
+<option value="Maleakhi">Maleakhi</option>
+</select>
+
+<div style="margin-top:10px; text-align:center;">
+  <button onclick="prevChapter()">⬅️ Pasal Sebelumnya</button>
+  <button onclick="nextChapter()">Pasal Selanjutnya ➡️</button>
+</div>
+<select id="chapterSelect" disabled onchange="goToChapter()">
+<option value="">-- Pilih Pasal --</option>
+</select>
+<a href="../new/Matius_1.html" style="margin-left:10px;">📖 Pindah ke Perjanjian Baru</a>
+</div><p><b>1</b> Dengarlah firman ini, yang diucapkan TUHAN tentang kamu, hai orang Israel, tentang segenap kaum yang telah Kutuntun keluar dari tanah Mesir, bunyinya:</p><p><b>2</b> "Hanya kamu yang Kukenal dari segala kaum di muka bumi, sebab itu Aku akan menghukum kamu karena segala kesalahanmu.</p><p><b>3</b> Berjalankah dua orang bersama-sama, jika mereka belum berjanji?</p><p><b>4</b> Mengaumkah seekor singa di hutan, apabila tidak mendapat mangsa? Bersuarakah singa muda dari sarangnya, jika belum menangkap apa-apa?</p><p><b>5</b> Jatuhkah seekor burung ke dalam perangkap di tanah, apabila tidak ada jerat terhadapnya? Membingkaskah perangkap dari tanah, jika tidak ditangkapnya sesuatu?</p><p><b>6</b> Adakah sangkakala ditiup di suatu kota, dan orang-orang tidak gemetar? Adakah terjadi malapetaka di suatu kota, dan TUHAN tidak melakukannya?</p><p><b>7</b> Sungguh, Tuhan ALLAH tidak berbuat sesuatu tanpa menyatakan keputusan-Nya kepada hamba-hamba-Nya, para nabi.</p><p><b>8</b> Singa telah mengaum, siapakah yang tidak takut? Tuhan ALLAH telah berfirman, siapakah yang tidak bernubuat?"</p><p><b>9</b> Siarkanlah di dalam puri di Asyur dan di dalam puri di tanah Mesir serta katakan: "Berkumpullah di gunung-gunung dekat Samaria dan pandanglah kekacauan besar yang ada di tengah-tengahnya dan pemerasan yang ada di kota itu."</p><p><b>10</b> "Mereka tidak tahu berbuat jujur," demikianlah firman TUHAN, "mereka itu yang menimbun kekerasan dan aniaya di dalam purinya."</p><p><b>11</b> Sebab itu beginilah firman Tuhan ALLAH: "Musuh akan ada di sekeliling negeri, kekuatanmu akan ditanggalkannya dari padamu, dan purimu akan dijarahi!"</p><p><b>12</b> Beginilah firman TUHAN: "Seperti seorang gembala melepaskan dari mulut singa dua tulang betis atau potongan telinga, demikianlah orang Israel yang diam di Samaria akan dilepaskan seperti sebagian dari katil dan seperti sepenggal dari kaki balai-balai."</p><p><b>13</b> "Dengarlah, dan peringatkanlah kaum keturunan Yakub," demikianlah firman Tuhan ALLAH, Allah semesta alam,</p><p><b>14</b> "bahwa pada waktu Aku menghukum Israel karena perbuatan-perbuatannya yang jahat, Aku akan melakukan hukuman kepada mezbah-mezbah Betel, sehingga tanduk-tanduk mezbah itu dipatahkan dan jatuh ke tanah.</p><p><b>15</b> Aku akan merobohkan balai musim dingin beserta balai musim panas; hancurlah rumah-rumah gading, dan habislah rumah-rumah gedang," demikianlah firman TUHAN.</p>
+<script>
+  const chapterCounts = {
+    "Kejadian": 50, "Keluaran": 40, "Imamat": 27, "Bilangan": 36, "Ulangan": 34,
+    "Yosua": 24, "Hakim-Hakim": 21, "Rut": 4,
+    "1_Samuel": 31, "2_Samuel": 24,
+    "1_Raja-Raja": 22, "2_Raja-Raja": 25,
+    "1_Tawarikh": 29, "2_Tawarikh": 36,
+    "Ezra": 10, "Nehemia": 13, "Ester": 10,
+    "Ayub": 42, "Mazmur": 150, "Amsal": 31, "Pengkhotbah": 12, "Kidung_Agung": 8,
+    "Yesaya": 66, "Yeremia": 52, "Ratapan": 5,
+    "Yehezkiel": 48, "Daniel": 12,
+    "Hosea": 14, "Yoel": 3, "Amos": 9, "Obaja": 1, "Yunus": 4,
+    "Mikha": 7, "Nahum": 3, "Habakuk": 3, "Zefanya": 3, "Hagai": 2,
+    "Zakharia": 14, "Maleakhi": 4,
+
+    "Matius": 28, "Markus": 16, "Lukas": 24, "Yohanes": 21,
+    "Kisah_Para_Rasul": 28,
+    "Roma": 16, "1_Korintus": 16, "2_Korintus": 13,
+    "Galatia": 6, "Efesus": 6, "Filipi": 4, "Kolose": 4,
+    "1_Tesalonika": 5, "2_Tesalonika": 3,
+    "1_Timotius": 6, "2_Timotius": 4,
+    "Titus": 3, "Filemon": 1,
+    "Ibrani": 13, "Yakobus": 5,
+    "1_Petrus": 5, "2_Petrus": 3,
+    "1_Yohanes": 5, "2_Yohanes": 1, "3_Yohanes": 1,
+    "Yudas": 1, "Wahyu": 22
+  };
+
+  function updateChapters() {
+    const book = document.getElementById("bookSelect").value;
+    const chapterSelect = document.getElementById("chapterSelect");
+    chapterSelect.innerHTML = '<option value="">-- Pilih Pasal --</option>';
+
+    if (book && chapterCounts[book]) {
+      for (let i = 1; i <= chapterCounts[book]; i++) {
+        const opt = document.createElement("option");
+        opt.value = i;
+        opt.textContent = i;
+        chapterSelect.appendChild(opt);
+      }
+      chapterSelect.disabled = false;
+    } else {
+      chapterSelect.disabled = true;
+    }
+  }
+
+  function goToChapter() {
+    const book = document.getElementById("bookSelect").value;
+    const chapter = document.getElementById("chapterSelect").value;
+    if (book && chapter) {
+      window.location.href = `${book}_${chapter}.html`;
+    }
+  }
+</script>
+
+
+<!-- PREV/NEXT SCRIPT START -->
+<script>
+  function getCurrentBookAndChapter() {
+    const file = (window.location.pathname.split("/").pop() || "").replace(".html","");
+    const parts = file.split("_");
+    const chapter = parseInt(parts.pop(), 10);
+    const book = parts.join("_");
+    return { book, chapter };
+  }
+
+  function prevChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    if (chapter > 1) {
+      window.location.href = `${book}_${chapter - 1}.html`;
+    }
+  }
+
+  function nextChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    // assume chapterCounts already exists from your dropdown script
+    const max = chapterCounts[book];
+    if (chapter < max) {
+      window.location.href = `${book}_${chapter + 1}.html`;
+    }
+  }
+</script>
+<!-- PREV/NEXT SCRIPT END -->
+
+</body></html>

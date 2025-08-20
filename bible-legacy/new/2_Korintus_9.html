@@ -1,0 +1,128 @@
+<html><head><meta charset='UTF-8'><title>2 Korintus 9</title></head><body><h1>2 Korintus 9</h1><div style="margin: 10px; text-align: center;">
+<select id="bookSelect" onchange="updateChapters()">
+<option value="">-- Pilih Kitab --</option>
+<option value="Matius">Matius</option>
+<option value="Markus">Markus</option>
+<option value="Lukas">Lukas</option>
+<option value="Yohanes">Yohanes</option>
+<option value="Kisah_Para_Rasul">Kisah Para Rasul</option>
+<option value="Roma">Roma</option>
+<option value="1_Korintus">1 Korintus</option>
+<option value="2_Korintus">2 Korintus</option>
+<option value="Galatia">Galatia</option>
+<option value="Efesus">Efesus</option>
+<option value="Filipi">Filipi</option>
+<option value="Kolose">Kolose</option>
+<option value="1_Tesalonika">1 Tesalonika</option>
+<option value="2_Tesalonika">2 Tesalonika</option>
+<option value="1_Timotius">1 Timotius</option>
+<option value="2_Timotius">2 Timotius</option>
+<option value="Titus">Titus</option>
+<option value="Filemon">Filemon</option>
+<option value="Ibrani">Ibrani</option>
+<option value="Yakobus">Yakobus</option>
+<option value="1_Petrus">1 Petrus</option>
+<option value="2_Petrus">2 Petrus</option>
+<option value="1_Yohanes">1 Yohanes</option>
+<option value="2_Yohanes">2 Yohanes</option>
+<option value="3_Yohanes">3 Yohanes</option>
+<option value="Yudas">Yudas</option>
+<option value="Wahyu">Wahyu</option>
+</select>
+
+<div style="margin-top:10px; text-align:center;">
+  <button onclick="prevChapter()">⬅️ Pasal Sebelumnya</button>
+  <button onclick="nextChapter()">Pasal Selanjutnya ➡️</button>
+</div>
+<select id="chapterSelect" disabled onchange="goToChapter()">
+<option value="">-- Pilih Pasal --</option>
+</select>
+<a href="../old/Kejadian_1.html" style="margin-left:10px;">📖 Pindah ke Perjanjian Lama</a>
+</div><p><b>1</b> Tentang pelayanan kepada orang-orang kudus tidak perlu lagi aku menuliskannya kepada kamu.</p><p><b>2</b> Aku telah tahu kerelaan hatimu tentang mana aku megahkan kamu kepada orang-orang Makedonia. Kataku: "Akhaya sudah siap sedia sejak tahun yang lampau." Dan kegiatanmu telah menjadi perangsang bagi banyak orang.</p><p><b>3</b> Aku mengutus saudara-saudara itu, agar kemegahan kami dalam hal ini atas kamu jangan ternyata menjadi sia-sia, tetapi supaya kamu benar-benar siap sedia seperti yang telah kukatakan,</p><p><b>4</b> supaya, apabila orang-orang Makedonia datang bersama-sama dengan aku, jangan mereka mendapati kamu belum siap sedia, sehingga kami--untuk tidak mengatakan kamu--merasa malu atas keyakinan kami itu.</p><p><b>5</b> Sebab itu aku merasa perlu mendorong saudara-saudara itu untuk berangkat mendahului aku, supaya mereka lebih dahulu mengurus pemberian yang telah kamu janjikan sebelumnya, agar nanti tersedia sebagai bukti kemurahan hati kamu dan bukan sebagai pemberian yang dipaksakan.</p><p><b>6</b> Camkanlah ini: Orang yang menabur sedikit, akan menuai sedikit juga, dan orang yang menabur banyak, akan menuai banyak juga.</p><p><b>7</b> Hendaklah masing-masing memberikan menurut kerelaan hatinya, jangan dengan sedih hati atau karena paksaan, sebab Allah mengasihi orang yang memberi dengan sukacita.</p><p><b>8</b> Dan Allah sanggup melimpahkan segala kasih karunia kepada kamu, supaya kamu senantiasa berkecukupan di dalam segala sesuatu dan malah berkelebihan di dalam pelbagai kebajikan.</p><p><b>9</b> Seperti ada tertulis: "Ia membagi-bagikan, Ia memberikan kepada orang miskin, kebenaran-Nya tetap untuk selamanya."</p><p><b>10</b> Ia yang menyediakan benih bagi penabur, dan roti untuk dimakan, Ia juga yang akan menyediakan benih bagi kamu dan melipatgandakannya dan menumbuhkan buah-buah kebenaranmu;</p><p><b>11</b> kamu akan diperkaya dalam segala macam kemurahan hati, yang membangkitkan syukur kepada Allah oleh karena kami.</p><p><b>12</b> Sebab pelayanan kasih yang berisi pemberian ini bukan hanya mencukupkan keperluan-keperluan orang-orang kudus, tetapi juga melimpahkan ucapan syukur kepada Allah.</p><p><b>13</b> Dan oleh sebab kamu telah tahan uji dalam pelayanan itu, mereka memuliakan Allah karena ketaatan kamu dalam pengakuan akan Injil Kristus dan karena kemurahan hatimu dalam membagikan segala sesuatu dengan mereka dan dengan semua orang,</p><p><b>14</b> sedangkan di dalam doa mereka, mereka juga merindukan kamu oleh karena kasih karunia Allah yang melimpah di atas kamu.</p><p><b>15</b> Syukur kepada Allah karena karunia-Nya yang tak terkatakan itu!</p>
+<script>
+  const chapterCounts = {
+    "Kejadian": 50, "Keluaran": 40, "Imamat": 27, "Bilangan": 36, "Ulangan": 34,
+    "Yosua": 24, "Hakim-Hakim": 21, "Rut": 4,
+    "1_Samuel": 31, "2_Samuel": 24,
+    "1_Raja-Raja": 22, "2_Raja-Raja": 25,
+    "1_Tawarikh": 29, "2_Tawarikh": 36,
+    "Ezra": 10, "Nehemia": 13, "Ester": 10,
+    "Ayub": 42, "Mazmur": 150, "Amsal": 31, "Pengkhotbah": 12, "Kidung_Agung": 8,
+    "Yesaya": 66, "Yeremia": 52, "Ratapan": 5,
+    "Yehezkiel": 48, "Daniel": 12,
+    "Hosea": 14, "Yoel": 3, "Amos": 9, "Obaja": 1, "Yunus": 4,
+    "Mikha": 7, "Nahum": 3, "Habakuk": 3, "Zefanya": 3, "Hagai": 2,
+    "Zakharia": 14, "Maleakhi": 4,
+
+    "Matius": 28, "Markus": 16, "Lukas": 24, "Yohanes": 21,
+    "Kisah_Para_Rasul": 28,
+    "Roma": 16, "1_Korintus": 16, "2_Korintus": 13,
+    "Galatia": 6, "Efesus": 6, "Filipi": 4, "Kolose": 4,
+    "1_Tesalonika": 5, "2_Tesalonika": 3,
+    "1_Timotius": 6, "2_Timotius": 4,
+    "Titus": 3, "Filemon": 1,
+    "Ibrani": 13, "Yakobus": 5,
+    "1_Petrus": 5, "2_Petrus": 3,
+    "1_Yohanes": 5, "2_Yohanes": 1, "3_Yohanes": 1,
+    "Yudas": 1, "Wahyu": 22
+  };
+
+  function updateChapters() {
+    const book = document.getElementById("bookSelect").value;
+    const chapterSelect = document.getElementById("chapterSelect");
+    chapterSelect.innerHTML = '<option value="">-- Pilih Pasal --</option>';
+
+    if (book && chapterCounts[book]) {
+      for (let i = 1; i <= chapterCounts[book]; i++) {
+        const opt = document.createElement("option");
+        opt.value = i;
+        opt.textContent = i;
+        chapterSelect.appendChild(opt);
+      }
+      chapterSelect.disabled = false;
+    } else {
+      chapterSelect.disabled = true;
+    }
+  }
+
+  function goToChapter() {
+    const book = document.getElementById("bookSelect").value;
+    const chapter = document.getElementById("chapterSelect").value;
+    if (book && chapter) {
+      window.location.href = `${book}_${chapter}.html`;
+    }
+  }
+</script>
+
+
+<!-- PREV/NEXT SCRIPT START -->
+<script>
+  function getCurrentBookAndChapter() {
+    const file = (window.location.pathname.split("/").pop() || "").replace(".html","");
+    const parts = file.split("_");
+    const chapter = parseInt(parts.pop(), 10);
+    const book = parts.join("_");
+    return { book, chapter };
+  }
+
+  function prevChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    if (chapter > 1) {
+      window.location.href = `${book}_${chapter - 1}.html`;
+    }
+  }
+
+  function nextChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    // assume chapterCounts already exists from your dropdown script
+    const max = chapterCounts[book];
+    if (chapter < max) {
+      window.location.href = `${book}_${chapter + 1}.html`;
+    }
+  }
+</script>
+<!-- PREV/NEXT SCRIPT END -->
+
+</body></html>

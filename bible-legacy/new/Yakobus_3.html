@@ -1,0 +1,128 @@
+<html><head><meta charset='UTF-8'><title>Yakobus 3</title></head><body><h1>Yakobus 3</h1><div style="margin: 10px; text-align: center;">
+<select id="bookSelect" onchange="updateChapters()">
+<option value="">-- Pilih Kitab --</option>
+<option value="Matius">Matius</option>
+<option value="Markus">Markus</option>
+<option value="Lukas">Lukas</option>
+<option value="Yohanes">Yohanes</option>
+<option value="Kisah_Para_Rasul">Kisah Para Rasul</option>
+<option value="Roma">Roma</option>
+<option value="1_Korintus">1 Korintus</option>
+<option value="2_Korintus">2 Korintus</option>
+<option value="Galatia">Galatia</option>
+<option value="Efesus">Efesus</option>
+<option value="Filipi">Filipi</option>
+<option value="Kolose">Kolose</option>
+<option value="1_Tesalonika">1 Tesalonika</option>
+<option value="2_Tesalonika">2 Tesalonika</option>
+<option value="1_Timotius">1 Timotius</option>
+<option value="2_Timotius">2 Timotius</option>
+<option value="Titus">Titus</option>
+<option value="Filemon">Filemon</option>
+<option value="Ibrani">Ibrani</option>
+<option value="Yakobus">Yakobus</option>
+<option value="1_Petrus">1 Petrus</option>
+<option value="2_Petrus">2 Petrus</option>
+<option value="1_Yohanes">1 Yohanes</option>
+<option value="2_Yohanes">2 Yohanes</option>
+<option value="3_Yohanes">3 Yohanes</option>
+<option value="Yudas">Yudas</option>
+<option value="Wahyu">Wahyu</option>
+</select>
+
+<div style="margin-top:10px; text-align:center;">
+  <button onclick="prevChapter()">⬅️ Pasal Sebelumnya</button>
+  <button onclick="nextChapter()">Pasal Selanjutnya ➡️</button>
+</div>
+<select id="chapterSelect" disabled onchange="goToChapter()">
+<option value="">-- Pilih Pasal --</option>
+</select>
+<a href="../old/Kejadian_1.html" style="margin-left:10px;">📖 Pindah ke Perjanjian Lama</a>
+</div><p><b>1</b> Saudara-saudaraku, janganlah banyak orang di antara kamu mau menjadi guru; sebab kita tahu, bahwa sebagai guru kita akan dihakimi menurut ukuran yang lebih berat.</p><p><b>2</b> Sebab kita semua bersalah dalam banyak hal; barangsiapa tidak bersalah dalam perkataannya, ia adalah orang sempurna, yang dapat juga mengendalikan seluruh tubuhnya.</p><p><b>3</b> Kita mengenakan kekang pada mulut kuda, sehingga ia menuruti kehendak kita, dengan jalan demikian kita dapat juga mengendalikan seluruh tubuhnya.</p><p><b>4</b> Dan lihat saja kapal-kapal, walaupun amat besar dan digerakkan oleh angin keras, namun dapat dikendalikan oleh kemudi yang amat kecil menurut kehendak jurumudi.</p><p><b>5</b> Demikian juga lidah, walaupun suatu anggota kecil dari tubuh, namun dapat memegahkan perkara-perkara yang besar. Lihatlah, betapapun kecilnya api, ia dapat membakar hutan yang besar.</p><p><b>6</b> Lidahpun adalah api; ia merupakan suatu dunia kejahatan dan mengambil tempat di antara anggota-anggota tubuh kita sebagai sesuatu yang dapat menodai seluruh tubuh dan menyalakan roda kehidupan kita, sedang ia sendiri dinyalakan oleh api neraka.</p><p><b>7</b> Semua jenis binatang liar, burung-burung, serta binatang-binatang menjalar dan binatang-binatang laut dapat dijinakkan dan telah dijinakkan oleh sifat manusia,</p><p><b>8</b> tetapi tidak seorangpun yang berkuasa menjinakkan lidah; ia adalah sesuatu yang buas, yang tak terkuasai, dan penuh racun yang mematikan.</p><p><b>9</b> Dengan lidah kita memuji Tuhan, Bapa kita; dan dengan lidah kita mengutuk manusia yang diciptakan menurut rupa Allah,</p><p><b>10</b> dari mulut yang satu keluar berkat dan kutuk. Hal ini, saudara-saudaraku, tidak boleh demikian terjadi.</p><p><b>11</b> Adakah sumber memancarkan air tawar dan air pahit dari mata air yang sama?</p><p><b>12</b> Saudara-saudaraku, adakah pohon ara dapat menghasilkan buah zaitun dan adakah pokok anggur dapat menghasilkan buah ara? Demikian juga mata air asin tidak dapat mengeluarkan air tawar.</p><p><b>13</b> Siapakah di antara kamu yang bijak dan berbudi? Baiklah ia dengan cara hidup yang baik menyatakan perbuatannya oleh hikmat yang lahir dari kelemahlembutan.</p><p><b>14</b> Jika kamu menaruh perasaan iri hati dan kamu mementingkan diri sendiri, janganlah kamu memegahkan diri dan janganlah berdusta melawan kebenaran!</p><p><b>15</b> Itu bukanlah hikmat yang datang dari atas, tetapi dari dunia, dari nafsu manusia, dari setan-setan.</p><p><b>16</b> Sebab di mana ada iri hati dan mementingkan diri sendiri di situ ada kekacauan dan segala macam perbuatan jahat.</p><p><b>17</b> Tetapi hikmat yang dari atas adalah pertama-tama murni, selanjutnya pendamai, peramah, penurut, penuh belas kasihan dan buah-buah yang baik, tidak memihak dan tidak munafik.</p><p><b>18</b> Dan buah yang terdiri dari kebenaran ditaburkan dalam damai untuk mereka yang mengadakan damai.</p>
+<script>
+  const chapterCounts = {
+    "Kejadian": 50, "Keluaran": 40, "Imamat": 27, "Bilangan": 36, "Ulangan": 34,
+    "Yosua": 24, "Hakim-Hakim": 21, "Rut": 4,
+    "1_Samuel": 31, "2_Samuel": 24,
+    "1_Raja-Raja": 22, "2_Raja-Raja": 25,
+    "1_Tawarikh": 29, "2_Tawarikh": 36,
+    "Ezra": 10, "Nehemia": 13, "Ester": 10,
+    "Ayub": 42, "Mazmur": 150, "Amsal": 31, "Pengkhotbah": 12, "Kidung_Agung": 8,
+    "Yesaya": 66, "Yeremia": 52, "Ratapan": 5,
+    "Yehezkiel": 48, "Daniel": 12,
+    "Hosea": 14, "Yoel": 3, "Amos": 9, "Obaja": 1, "Yunus": 4,
+    "Mikha": 7, "Nahum": 3, "Habakuk": 3, "Zefanya": 3, "Hagai": 2,
+    "Zakharia": 14, "Maleakhi": 4,
+
+    "Matius": 28, "Markus": 16, "Lukas": 24, "Yohanes": 21,
+    "Kisah_Para_Rasul": 28,
+    "Roma": 16, "1_Korintus": 16, "2_Korintus": 13,
+    "Galatia": 6, "Efesus": 6, "Filipi": 4, "Kolose": 4,
+    "1_Tesalonika": 5, "2_Tesalonika": 3,
+    "1_Timotius": 6, "2_Timotius": 4,
+    "Titus": 3, "Filemon": 1,
+    "Ibrani": 13, "Yakobus": 5,
+    "1_Petrus": 5, "2_Petrus": 3,
+    "1_Yohanes": 5, "2_Yohanes": 1, "3_Yohanes": 1,
+    "Yudas": 1, "Wahyu": 22
+  };
+
+  function updateChapters() {
+    const book = document.getElementById("bookSelect").value;
+    const chapterSelect = document.getElementById("chapterSelect");
+    chapterSelect.innerHTML = '<option value="">-- Pilih Pasal --</option>';
+
+    if (book && chapterCounts[book]) {
+      for (let i = 1; i <= chapterCounts[book]; i++) {
+        const opt = document.createElement("option");
+        opt.value = i;
+        opt.textContent = i;
+        chapterSelect.appendChild(opt);
+      }
+      chapterSelect.disabled = false;
+    } else {
+      chapterSelect.disabled = true;
+    }
+  }
+
+  function goToChapter() {
+    const book = document.getElementById("bookSelect").value;
+    const chapter = document.getElementById("chapterSelect").value;
+    if (book && chapter) {
+      window.location.href = `${book}_${chapter}.html`;
+    }
+  }
+</script>
+
+
+<!-- PREV/NEXT SCRIPT START -->
+<script>
+  function getCurrentBookAndChapter() {
+    const file = (window.location.pathname.split("/").pop() || "").replace(".html","");
+    const parts = file.split("_");
+    const chapter = parseInt(parts.pop(), 10);
+    const book = parts.join("_");
+    return { book, chapter };
+  }
+
+  function prevChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    if (chapter > 1) {
+      window.location.href = `${book}_${chapter - 1}.html`;
+    }
+  }
+
+  function nextChapter() {
+    const { book, chapter } = getCurrentBookAndChapter();
+    if (!book || !chapter) return;
+    // assume chapterCounts already exists from your dropdown script
+    const max = chapterCounts[book];
+    if (chapter < max) {
+      window.location.href = `${book}_${chapter + 1}.html`;
+    }
+  }
+</script>
+<!-- PREV/NEXT SCRIPT END -->
+
+</body></html>
