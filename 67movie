@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Link Page</title>
+  <style>
+    :root { --accent: #1e90ff; --muted: rgba(255,255,255,0.6); }
+    html,body { height:100%; margin:0; }
+    body {
+      background:#000;
+      color:var(--muted);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial, sans-serif;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      gap:18px;
+    }
+    a.main-link {
+      background:transparent;
+      color:var(--accent);
+      text-decoration:none;
+      font-size:1.1rem;
+      padding:12px 18px;
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:8px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    }
+    a.main-link:focus, a.main-link:hover { outline:2px solid rgba(30,144,255,0.18); }
+    button.back {
+      font-size:0.85rem;
+      padding:8px 12px;
+      border-radius:6px;
+      border:1px solid rgba(255,255,255,0.06);
+      background:transparent;
+      color:var(--muted);
+      cursor:pointer;
+    }
+    button.back:active { transform:translateY(1px); }
+    .small-note { font-size:0.85rem; color:rgba(255,255,255,0.35); }
+    /* make the layout responsive and keep things small on tiny screens */
+    @media (max-width:380px){ a.main-link{ font-size:1rem; padding:10px 14px } }
+  </style>
+</head>
+<body>
+  <a class="main-link" href="https://joshualim26710.wixsite.com/s-movie-reviews/" target="_blank" rel="noopener noreferrer">Open 67 Movie Reviews</a>
+  <div class="small-note">Click the link above to visit the site.</div>
+  <button class="back" onclick="history.back()" title="Go back to previous page">Back to home page</button>
+
+  <script>
+    // If there's no history (e.g. opened in a new tab), send the user to root (site owner's homepage)
+    document.querySelector('.back').addEventListener('click', function (e) {
+      if (history.length <= 1) {
+        // Change this URL if you want the button to send users somewhere specific
+        window.location.href = '/';
+      }
+    });
+  </script>
+</body>
+</html>
