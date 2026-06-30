@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Joshh.my.id</title>
+
   <style>
     :root {
       --bg-color: #000;
@@ -41,11 +42,6 @@
       text-decoration: underline;
     }
 
-    .info {
-      font-size: 24px;
-      margin-top: 16px;
-    }
-
     #theme-toggle {
       background: none;
       border: none;
@@ -55,26 +51,29 @@
     }
 
     #theme-toggle img {
-      width: 128px; /* 4x wider */
+      width: 128px;
       height: auto;
       transition: transform 0.3s;
     }
 
-    .email {
-      font-weight: bold;
-      text-decoration: underline;
-      color: var(--text-color);
+    .domain {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #888;
+      opacity: 0.8;
     }
   </style>
 </head>
+
 <body>
-  <!-- Centered Toggle Button -->
+  <!-- Theme Toggle -->
   <button id="theme-toggle" title="Toggle theme">
     <img id="toggle-icon" src="button-dark.png" alt="Toggle Theme">
   </button>
 
   <!-- Main Content -->
   <h1>Hi, I'm <a href="/about.html">Joshh(ua)</a></h1>
+  <p class="domain">joshh.my.id</p>
 
   <script>
     const toggleBtn = document.getElementById('theme-toggle');
@@ -107,7 +106,5 @@
   </script>
 </body>
 </html>
-
-
 
 
